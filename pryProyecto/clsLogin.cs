@@ -51,7 +51,7 @@ namespace pryProyecto
                 using (var conexion = conexionBD.AbrirConexion())
                 {
                     string sql = "SELECT perfil FROM tblUsuarios "
-                        + "WHERE nombreUsuario = @usuario AND password = @password";
+                        + "WHERE nombreUsuario = @usuario AND password = MD5(@password)";
 
                     using (var consulta = new MySqlCommand(sql, conexion))
                     {
