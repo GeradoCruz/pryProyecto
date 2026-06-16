@@ -69,7 +69,7 @@ namespace pryProyecto
                                     throw new Exception($"El perfil{perfil} no tiene permisos para acceder");
                                 }
 
-                                MessageBox.Show("Tu perfil es: " + perfil + "Sistema");
+                                MessageBox.Show("Tu perfil es: " + perfil + " Sistema");
                                 return true;
                             }
                             else
