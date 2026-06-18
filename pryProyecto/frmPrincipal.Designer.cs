@@ -81,6 +81,7 @@
             pcbCarreras.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbCarreras.TabIndex = 3;
             pcbCarreras.TabStop = false;
+            pcbCarreras.Click += pcbCarreras_Click;
             pcbCarreras.MouseDown += pcbGeneral_MouseDown;
             pcbCarreras.MouseUp += pcbGeneral_MouseUp;
             // 
