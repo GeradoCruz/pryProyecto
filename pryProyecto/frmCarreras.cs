@@ -12,9 +12,14 @@ namespace pryProyecto
 {
     public partial class frmCarreras : Form
     {
+        clsCarreras carreras;
         public frmCarreras()
         {
             InitializeComponent();
+            carreras = new clsCarreras();
+            dgvCarreras.DataSource = null;
+            dgvCarreras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvCarreras.DataSource = carreras.cargarDataGrid();
         }
     }
 }
