@@ -21,7 +21,7 @@ namespace pryProyecto
 
             clsConexion conexionBD = new clsConexion();
             var conexion = conexionBD.AbrirConexion();
-            string sql = "select*from tblCarreras;";
+            string sql = "select idCarrera As Clave, nombreCarrera AS Carrera, descripcion AS Descripción from tblCarreras;";
             consulta=new MySqlDataAdapter(sql,conexion);
             consulta.Fill(tabla);
             return tabla;
