@@ -48,6 +48,7 @@
             // lblTitulo
             // 
             lblTitulo.AutoSize = true;
+            lblTitulo.BackColor = SystemColors.ButtonFace;
             lblTitulo.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitulo.Location = new Point(259, 19);
             lblTitulo.Name = "lblTitulo";
@@ -57,11 +58,13 @@
             // 
             // pnlAgrupaControles
             // 
+            pnlAgrupaControles.BackColor = SystemColors.ButtonFace;
             pnlAgrupaControles.Controls.Add(btnEliminar);
             pnlAgrupaControles.Controls.Add(btnGuardar);
             pnlAgrupaControles.Controls.Add(btnNuevo);
             pnlAgrupaControles.Controls.Add(txtDescripcion);
             pnlAgrupaControles.Controls.Add(txtNombre);
+            pnlAgrupaControles.ForeColor = SystemColors.AppWorkspace;
             pnlAgrupaControles.Location = new Point(47, 93);
             pnlAgrupaControles.Name = "pnlAgrupaControles";
             pnlAgrupaControles.Size = new Size(865, 198);
@@ -118,6 +121,7 @@
             // 
             // dgvCarreras
             // 
+            dgvCarreras.BackgroundColor = SystemColors.ControlLight;
             dgvCarreras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCarreras.Location = new Point(47, 338);
             dgvCarreras.Name = "dgvCarreras";
@@ -156,6 +160,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlLight;
             BackgroundImage = Properties.Resources.Imagen3;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(951, 514);

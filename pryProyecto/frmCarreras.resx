@@ -121,7 +121,7 @@
   <data name="btnEliminar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABY0AAAM0CAYAAAD3JA3HAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAy
-        vAAAMrwB1w6hmwAA/7JJREFUeF7s3Qd8ltXB9/EYhjjrtlprbX1stdYOu237dtnaoVVkmMmQLXsv2Y66
+        uwAAMrsBhUoH5AAA/7JJREFUeF7s3Qd8ltXB9/EYhjjrtlprbX1stdYOu237dtnaoVVkmMmQLXsv2Y66
         NzM7JIQ9k0ASliKgoKKyl2wIEEBFFBn/9z7XfYKWXlcjet3JPX7fz/t/w/M87cl9X1zn3Hz+OTlXHAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1483,7 +1483,7 @@
   <data name="btnGuardar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABeAAAALlCAYAAACsKEY5AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAy
-        uwAAMrsBhUoH5AAA4tdJREFUeF7s3QeYVNXZwHFh6b1JlV4FaQpSBKT33pfeZZe6FHtXREQTNZpYYm+x
+        ugAAMroBVw3lAAAA4tdJREFUeF7s3QeYVNXZwHFh6b1JlV4FaQpSBKT33pfeZZe6FHtXREQTNZpYYm+x
         JNHEFmMSNfaKIr0I0kEEpdji9373XM7a5gizO3fu3jPn/3ue/8P3RZ2dM7szc++7lzMnCQAAAAAAAAAA
         ITjJNXrdAAAAAAAAAAAklR5Lu0OvG8iVHTt2yNNPPy233HKLLF68WEaMGCFt27aVBg0aSLVq1aRcuXJS
         rFgxyZcvn3pyERGRTr0uFi1aVGrWrCl9+/aV3/zmN7J9+3b96goAAAAAQGryzondotcNnND//d//yerV
@@ -2457,7 +2457,7 @@
   <data name="btnNuevo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABdgAAALlCAYAAADXDIT1AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAy
-        uwAAMrsBhUoH5AAA/7JJREFUeF7s3Qd0HdW9tnFULcmS5SL33nvvvffee+8Vd9PB9GBKIAESSmgJHUyv
+        ugAAMroBVw3lAAAA/7JJREFUeF7s3Qd0HdW9tnFULcmS5SL33nvvvffee+8Vd9PB9GBKIAESSmgJHUyv
         gRBCu4QEMCU2uOFu3Auu4PfOHm/jxB6wdXQkHW09v7WeJb773SvNlnTmzPw1nrlAAAAAAAAAAABkkQtc
         YtcEAAAAAAAAAECms6NpN9g1AQAAAAAAAACQ6exo2g12TQAAAAAAAAAAZDo7mnaDXRMAAAAAAAAAAJnO
         jqbdYNcEAAAAAAAAAECms6NpN9g1AQAAAAAAAACQ6exo2g12TQAAAAAAAAAAZDo7mnaDXRMAAAAAAAAA
