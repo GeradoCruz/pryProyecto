@@ -46,7 +46,5 @@ namespace pryProyecto
 
             pcbAlumnos.Enabled = clsLogin.EsAdministrador || clsLogin.EsDocente;
         }
-
-        
     }
 }
