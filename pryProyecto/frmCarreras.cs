@@ -13,6 +13,7 @@ namespace pryProyecto
     public partial class frmCarreras : Form
     {
         clsCarreras carreras;
+        int idCarrera;
         public frmCarreras()
         {
             InitializeComponent();
@@ -43,6 +44,15 @@ namespace pryProyecto
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void dgvCarreras_SelectionChanged(object sender, EventArgs e)
+        {
+            //Este es el campo oculto que me servira de referencia para actualizar y eliminar
+            idCarrera = int.Parse(dgvCarreras.CurrentRow.Cells[0].Value.ToString());
+
+            txtNombre.Text = dgvCarreras.CurrentRow.Cells[1].Value.ToString();
+            txtDescripcion.Text = dgvCarreras.CurrentRow.Cells[2].Value.ToString();
         }
     }
 }
