@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCarreras));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             pnlAgrupaControles = new Panel();
             btnEliminar = new Button();
@@ -41,7 +41,7 @@
             dgvCarreras = new DataGridView();
             textBox1 = new TextBox();
             pcbLogo = new PictureBox();
-            txtBuscar = new TextBox();
+            txtNombreCarrera = new TextBox();
             pnlAgrupaControles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCarreras).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
@@ -127,21 +127,21 @@
             // dgvCarreras
             // 
             dgvCarreras.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(192, 255, 255);
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Blue;
-            dgvCarreras.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Blue;
+            dgvCarreras.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvCarreras.BackgroundColor = SystemColors.ControlLight;
             dgvCarreras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.InactiveCaption;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvCarreras.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.InactiveCaption;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvCarreras.DefaultCellStyle = dataGridViewCellStyle4;
             dgvCarreras.EnableHeadersVisualStyles = false;
             dgvCarreras.Location = new Point(66, 330);
             dgvCarreras.Name = "dgvCarreras";
@@ -155,7 +155,7 @@
             textBox1.Font = new Font("Segoe UI Black", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(1029, 363);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(208, 36);
+            textBox1.Size = new Size(208, 35);
             textBox1.TabIndex = 4;
             textBox1.Text = "Buscar Carrera";
             // 
@@ -169,14 +169,14 @@
             pcbLogo.TabIndex = 5;
             pcbLogo.TabStop = false;
             // 
-            // txtBuscar
+            // txtNombreCarrera
             // 
-            txtBuscar.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtBuscar.Location = new Point(698, 289);
-            txtBuscar.Name = "txtBuscar";
-            txtBuscar.PlaceholderText = "Buscar Carrera";
-            txtBuscar.Size = new Size(177, 33);
-            txtBuscar.TabIndex = 6;
+            txtNombreCarrera.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtNombreCarrera.Location = new Point(698, 289);
+            txtNombreCarrera.Name = "txtNombreCarrera";
+            txtNombreCarrera.PlaceholderText = "Buscar Carrera";
+            txtNombreCarrera.Size = new Size(177, 33);
+            txtNombreCarrera.TabIndex = 6;
             // 
             // frmCarreras
             // 
@@ -186,7 +186,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(951, 514);
-            Controls.Add(txtBuscar);
+            Controls.Add(txtNombreCarrera);
             Controls.Add(pcbLogo);
             Controls.Add(textBox1);
             Controls.Add(dgvCarreras);
@@ -214,6 +214,6 @@
         private DataGridView dgvCarreras;
         private TextBox textBox1;
         private PictureBox pcbLogo;
-        private TextBox txtBuscar;
+        private TextBox txtNombreCarrera;
     }
 }
