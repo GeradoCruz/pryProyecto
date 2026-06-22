@@ -19,7 +19,14 @@ namespace pryProyecto
             carreras = new clsCarreras();
             dgvCarreras.DataSource = null;
             dgvCarreras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            dgvCarreras.DataSource = carreras.cargarDataGrid();
+            try
+            {
+                dgvCarreras.DataSource = carreras.cargarDataGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

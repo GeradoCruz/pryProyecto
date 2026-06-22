@@ -14,6 +14,7 @@ namespace pryProyecto
                 {
 
                     Application.Run(new frmPrincipal());
+
                 }
             }
            
