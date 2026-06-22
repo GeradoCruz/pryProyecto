@@ -54,7 +54,7 @@ namespace pryProyecto
                     string sql = "select idCarrera As Clave, nombreCarrera AS Carrera, descripcion AS Descripción from tblCarreras where nombreCarrera like @carrera;";
                     using (var consultar = new MySqlCommand(sql, conexion))
                     {
-                        consultar.Parameters.AddWithValue("@carrera", nombreCarrera);
+                        consultar.Parameters.AddWithValue("@carrera", "%"+nombreCarrera+"%");
                         using (consulta = new MySqlDataAdapter(consultar))
                         {
                             consulta.Fill(tabla);

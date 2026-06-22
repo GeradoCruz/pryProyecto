@@ -28,5 +28,21 @@ namespace pryProyecto
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void txtNombreCarrera_TextChanged(object sender, EventArgs e)
+        {
+            carreras = new clsCarreras();
+            dgvCarreras.DataSource = null;
+            dgvCarreras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            try
+            {
+                carreras.NombreCarrera = txtNombreCarrera.Text;
+                dgvCarreras.DataSource = carreras.Consultar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
