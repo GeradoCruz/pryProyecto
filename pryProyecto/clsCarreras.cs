@@ -78,37 +78,62 @@ namespace pryProyecto
         public string GuardarActualizar(int tipoOperacion)
         {
             string msg = "";
-
-            clsConexion conexionBD = new clsConexion();
-            using (var conexion = conexionBD.AbrirConexion())
+            try
             {
 
-                switch (tipoOperacion)
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
                 {
-                    case 0:
-                        //registro nuevo
-                        string sqlNew = "insert into tblcarreras(nombreCarrera_descripcion) values(@nombreCarrera, @descripcion)";
-                        using (comando = new MySqlCommand(sqlNew, conexion))
-                        {
-                            comando.Parameters.AddWithValue("idCarrera", idCarrera);
-                            comando.Parameters.AddWithValue("nombreCarrera", nombreCarrera);
-                            comando.Parameters.AddWithValue("descripcion", descripcion);
 
-                            int filasAfectadas = comando.ExecuteNonQuery();
-                            if (filasAfectadas > 0)
+                    switch (tipoOperacion)
+                    {
+                        case 0:
+                            //registro nuevo
+                            string sqlN = "insert into tblcarreras C (C.nombreCarrera,C.descripcion) values(@nombreCarrera, @descripcion)";
+                            using (comando = new MySqlCommand(sqlN, conexion))
                             {
-                                msg = "El registro se guardó correctamente";
+                                comando.Parameters.AddWithValue("nombreCarrera", nombreCarrera);
+                                comando.Parameters.AddWithValue("descripcion", descripcion);
+
+                                int filasAfectadas = comando.ExecuteNonQuery();
+                                if (filasAfectadas > 0)
+                                {
+                                    msg = "El registro se guardó correctamente";
+                                }
+                                else
+                                {
+                                    msg = "Error, no se guardaron los  datos....";
+                                }
                             }
-                            else
+                            break;
+                        case 1:
+                            string sqlA = "UPDATE tblCarreras C SET C.nombreCarrera = @nombreCarrera, C.descripcion = @descripcion WHERE C.idCarrera = @idCarrera";
+                            using (comando = new MySqlCommand(sqlA, conexion))
                             {
-                                msg = "Error, no se guardaron los  datos....";
+
+                                comando.Parameters.AddWithValue("idCarrera", idCarrera);
+                                comando.Parameters.AddWithValue("nombreCarrera", nombreCarrera);
+                                comando.Parameters.AddWithValue("descripcion", descripcion);
+
+                                int filasAfectadas = comando.ExecuteNonQuery();
+                                if (filasAfectadas > 0)
+                                {
+                                    msg = "El registro se guardó correctamente";
+                                }
+                                else
+                                {
+                                    msg = "Error, no se guardaron los  datos....";
+                                }
                             }
-                        }
-                        break;
+                            break;
+                    }
+
                 }
-                return msg;
+            }catch(Exception ex)
+            {
+                throw new Exception("Error"+ex.Message);
             }
-
+            return msg;
         }
     }
 }
