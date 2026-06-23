@@ -22,6 +22,9 @@ namespace pryProyecto
 
         //propiedad para el atributo nombreCarrera
         public string NombreCarrera { get => nombreCarrera; set => nombreCarrera = value; }
+        public string Descripcion { get => descripcion; set => descripcion = value; }
+        public int IdCarrera { get => idCarrera; set => idCarrera = value; }
+
         //Método para cargar datos en el DataGrid
         public DataTable cargarDataGrid()
         {

@@ -54,5 +54,28 @@ namespace pryProyecto
             txtNombre.Text = dgvCarreras.CurrentRow.Cells[1].Value.ToString();
             txtDescripcion.Text = dgvCarreras.CurrentRow.Cells[2].Value.ToString();
         }
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int tipoOperacion = idCarrera == 0 ? 0 : 1;
+                carreras.IdCarrera = idCarrera;
+                carreras.NombreCarrera = txtNombre.Text;
+                carreras.Descripcion = txtDescripcion.Text;
+                string msg = carreras.GuardarActualizar(tipoOperacion);
+                MessageBox.Show(msg);
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+                
+        }
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            idCarrera = 0;
+            txtNombre.Clear();
+            txtDescripcion.Clear();
+            txtNombre.Focus();
+        }
     }
 }
