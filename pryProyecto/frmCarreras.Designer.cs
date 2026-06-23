@@ -33,9 +33,9 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             lblTitulo = new Label();
             pnlAgrupaControles = new Panel();
-            btnEliminar = new Button();
-            btnGuardar = new Button();
             btnNuevo = new Button();
+            btnGuardar = new Button();
+            btnEliminar = new Button();
             txtDescripcion = new TextBox();
             txtNombre = new TextBox();
             dgvCarreras = new DataGridView();
@@ -61,9 +61,9 @@
             // pnlAgrupaControles
             // 
             pnlAgrupaControles.BackColor = SystemColors.ButtonFace;
-            pnlAgrupaControles.Controls.Add(btnEliminar);
-            pnlAgrupaControles.Controls.Add(btnGuardar);
             pnlAgrupaControles.Controls.Add(btnNuevo);
+            pnlAgrupaControles.Controls.Add(btnGuardar);
+            pnlAgrupaControles.Controls.Add(btnEliminar);
             pnlAgrupaControles.Controls.Add(txtDescripcion);
             pnlAgrupaControles.Controls.Add(txtNombre);
             pnlAgrupaControles.ForeColor = SystemColors.AppWorkspace;
@@ -72,17 +72,18 @@
             pnlAgrupaControles.Size = new Size(822, 182);
             pnlAgrupaControles.TabIndex = 2;
             // 
-            // btnEliminar
+            // btnNuevo
             // 
-            btnEliminar.BackColor = SystemColors.ButtonHighlight;
-            btnEliminar.BackgroundImage = (Image)resources.GetObject("btnEliminar.BackgroundImage");
-            btnEliminar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnEliminar.ForeColor = SystemColors.Control;
-            btnEliminar.Location = new Point(208, 113);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(132, 54);
-            btnEliminar.TabIndex = 4;
-            btnEliminar.UseVisualStyleBackColor = false;
+            btnNuevo.BackColor = SystemColors.ButtonHighlight;
+            btnNuevo.BackgroundImage = (Image)resources.GetObject("btnNuevo.BackgroundImage");
+            btnNuevo.BackgroundImageLayout = ImageLayout.Stretch;
+            btnNuevo.ForeColor = SystemColors.Control;
+            btnNuevo.Location = new Point(208, 113);
+            btnNuevo.Name = "btnNuevo";
+            btnNuevo.Size = new Size(132, 54);
+            btnNuevo.TabIndex = 4;
+            btnNuevo.UseVisualStyleBackColor = false;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnGuardar
             // 
@@ -94,17 +95,19 @@
             btnGuardar.Size = new Size(132, 54);
             btnGuardar.TabIndex = 3;
             btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
             // 
-            // btnNuevo
+            // btnEliminar
             // 
-            btnNuevo.BackColor = SystemColors.Control;
-            btnNuevo.BackgroundImage = (Image)resources.GetObject("btnNuevo.BackgroundImage");
-            btnNuevo.BackgroundImageLayout = ImageLayout.Stretch;
-            btnNuevo.Location = new Point(527, 113);
-            btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(127, 54);
-            btnNuevo.TabIndex = 2;
-            btnNuevo.UseVisualStyleBackColor = false;
+            btnEliminar.BackColor = SystemColors.Control;
+            btnEliminar.BackgroundImage = (Image)resources.GetObject("btnEliminar.BackgroundImage");
+            btnEliminar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnEliminar.Location = new Point(527, 113);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(127, 54);
+            btnEliminar.TabIndex = 2;
+            btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // txtDescripcion
             // 
@@ -156,7 +159,7 @@
             textBox1.Font = new Font("Segoe UI Black", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(1029, 363);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(208, 36);
+            textBox1.Size = new Size(208, 35);
             textBox1.TabIndex = 4;
             textBox1.Text = "Buscar Carrera";
             // 
@@ -210,9 +213,9 @@
         private Panel pnlAgrupaControles;
         private TextBox txtNombre;
         private TextBox txtDescripcion;
-        private Button btnEliminar;
-        private Button btnGuardar;
         private Button btnNuevo;
+        private Button btnGuardar;
+        private Button btnEliminar;
         private DataGridView dgvCarreras;
         private TextBox textBox1;
         private PictureBox pcbLogo;

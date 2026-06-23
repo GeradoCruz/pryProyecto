@@ -17,6 +17,13 @@ namespace pryProyecto
         public frmCarreras()
         {
             InitializeComponent();
+            CargarGrid();
+
+        }
+
+        //cargar grid 
+        public void CargarGrid()
+        {
             carreras = new clsCarreras();
             dgvCarreras.DataSource = null;
             dgvCarreras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -62,13 +69,30 @@ namespace pryProyecto
                 carreras.IdCarrera = idCarrera;
                 carreras.NombreCarrera = txtNombre.Text;
                 carreras.Descripcion = txtDescripcion.Text;
-                string msg = carreras.GuardarActualizar(tipoOperacion);
-                MessageBox.Show(msg);
-            }catch(Exception ex)
+                string msg = "";
+                if(tipoOperacion!= 0)
+                {
+                    var resp = MessageBox.Show("Confirmar que se desea actualizar el dato seleccionado", "ALERTA!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (resp == DialogResult.Yes)
+                    {
+                        msg = carreras.GuardarActualizar(tipoOperacion);
+                        MessageBox.Show(msg);
+                    }
+                }
+                else
+                {
+                    msg = carreras.GuardarActualizar(tipoOperacion);
+                    MessageBox.Show(msg);
+                }
+
+                
+                CargarGrid();
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-                
+
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -76,6 +100,27 @@ namespace pryProyecto
             txtNombre.Clear();
             txtDescripcion.Clear();
             txtNombre.Focus();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                carreras.IdCarrera = idCarrera;
+                var resp = MessageBox.Show("Confirmar que se desea eliminar el dato seleccionado","ALERTA!!", MessageBoxButtons.YesNo,MessageBoxIcon.Stop);
+                if(resp == DialogResult.Yes)
+                {
+                    string msg = carreras.Eliminar();
+                    MessageBox.Show(msg);
+                    CargarGrid();
+                }
+               
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
