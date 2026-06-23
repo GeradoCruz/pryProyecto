@@ -92,7 +92,7 @@ namespace pryProyecto
                     {
                         case 0:
                             //registro nuevo
-                            string sqlN = "insert into tblcarreras C (C.nombreCarrera,C.descripcion) values(@nombreCarrera, @descripcion)";
+                            string sqlN = "insert into tblcarreras  (nombreCarrera,descripcion) values(@nombreCarrera, @descripcion)";
                             using (comando = new MySqlCommand(sqlN, conexion))
                             {
                                 comando.Parameters.AddWithValue("nombreCarrera", nombreCarrera);
