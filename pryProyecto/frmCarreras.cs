@@ -18,7 +18,7 @@ namespace pryProyecto
         {
             InitializeComponent();
             CargarGrid();
-
+            dgvCarreras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         //cargar grid 
