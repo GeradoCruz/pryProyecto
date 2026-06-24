@@ -36,14 +36,17 @@ namespace pryProyecto
             pcbCarreras.Parent = pcbMenu;
             pcbDocente.Parent = pcbMenu;
             pcbUsuario.Parent = pcbMenu;
+            pcbTutores.Parent = pcbMenu;
             pcbAlumnos.BackColor = Color.Transparent;
             pcbCarreras.BackColor = Color.Transparent;
             pcbDocente.BackColor = Color.Transparent;
             pcbUsuario.BackColor = Color.Transparent;
+            pcbTutores.BackColor = Color.Transparent;
 
             pcbCarreras.Enabled = clsLogin.EsAdministrador;
             pcbDocente.Enabled = clsLogin.EsAdministrador;
             pcbUsuario.Enabled = clsLogin.EsAdministrador;
+            pcbTutores.Enabled = clsLogin.EsAdministrador;
 
             pcbAlumnos.Enabled = clsLogin.EsAdministrador || clsLogin.EsDocente;
         }
