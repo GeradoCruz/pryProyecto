@@ -95,5 +95,41 @@ namespace pryProyecto
             txtCorreo.Text = dgvTutor.CurrentRow.Cells[5].Value.ToString();
 
         }
+
+        private void btnGurdar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int tipoOperacion = idTutores == 0 ? 0 : 1;
+                tutores.IdTutor = idTutores;
+                tutores.NombreComp = txtNombreCompleto.Text;
+                tutores.Parentesco = txtParentesco.Text;
+                tutores.Direccion = txtDireccion.Text;
+                tutores.Telefono = txtTelefono.Text;
+                tutores.Correo = txtCorreo.Text;
+                string msg = "";
+                if (tipoOperacion != 0)
+                {
+                    var resp = MessageBox.Show("Confirmar que se desea actualizar el dato seleccionado", "ALERTA!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (resp == DialogResult.Yes)
+                    {
+                        msg = tutores.GuardarActualizar(tipoOperacion);
+                        MessageBox.Show(msg);
+                    }
+                }
+                else
+                {
+                    msg = tutores.GuardarActualizar(tipoOperacion);
+                    MessageBox.Show(msg);
+                }
+
+
+                CargarGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
