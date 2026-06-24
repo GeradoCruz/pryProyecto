@@ -161,6 +161,7 @@
             txtBuscar.PlaceholderText = "Buscar";
             txtBuscar.Size = new Size(238, 33);
             txtBuscar.TabIndex = 13;
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // frmTutores
             // 

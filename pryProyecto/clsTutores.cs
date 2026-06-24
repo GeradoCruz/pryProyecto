@@ -49,5 +49,31 @@ namespace pryProyecto
             }
             return tabla;
         }
+        //Metodo de consulta para buscar
+        public DataTable Consultar()
+        {
+            tabla=new DataTable();
+            try
+            {
+                clsConexion conexionBD=new clsConexion();
+                using(var conexion=conexionBD.AbrirConexion())
+                {
+                    string sql = "select idTutor AS Clave, nombreTutor AS 'Nombre Completo', parentesco AS Parentesco, direccion AS 'Dirección', telefono AS 'Teléfono', correo AS Correo from tbltutores where nombreTutor like @nombreTutor ;";
+                    using (var consultar = new MySqlCommand(sql, conexion))
+                    {
+                        consultar.Parameters.AddWithValue("@nombreTutor", "%" + nombreComp + "%");
+                        using(consulta=new MySqlDataAdapter(consultar))
+                        {
+                            consulta.Fill(tabla);
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                throw new Exception("Error en la conexion" + ex.Message);
+            }
+            return tabla;
+        }
     }
 }
