@@ -12,9 +12,27 @@ namespace pryProyecto
 {
     public partial class frmTutores : Form
     {
+        clsTutores tutores;
+        int idTutores;
         public frmTutores()
         {
             InitializeComponent();
+            CargarGrid();
+        }
+
+        public void CargarGrid()
+        {
+            tutores = new clsTutores();
+            dgvTutor.DataSource = null;
+            dgvTutor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            try
+            {
+                dgvTutor.DataSource = tutores.cargarTabla();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
