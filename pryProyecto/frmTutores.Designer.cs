@@ -48,55 +48,60 @@
             // txtNombreCompleto
             // 
             txtNombreCompleto.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombreCompleto.Location = new Point(157, 70);
+            txtNombreCompleto.Location = new Point(179, 93);
+            txtNombreCompleto.Margin = new Padding(3, 4, 3, 4);
             txtNombreCompleto.Name = "txtNombreCompleto";
             txtNombreCompleto.PlaceholderText = "Ingrese nombre completo";
-            txtNombreCompleto.Size = new Size(408, 29);
+            txtNombreCompleto.Size = new Size(466, 34);
             txtNombreCompleto.TabIndex = 0;
             // 
             // txtParentesco
             // 
             txtParentesco.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtParentesco.Location = new Point(157, 105);
+            txtParentesco.Location = new Point(179, 140);
+            txtParentesco.Margin = new Padding(3, 4, 3, 4);
             txtParentesco.Name = "txtParentesco";
             txtParentesco.PlaceholderText = "Parentesco";
-            txtParentesco.Size = new Size(408, 29);
+            txtParentesco.Size = new Size(466, 34);
             txtParentesco.TabIndex = 1;
             // 
             // txtDireccion
             // 
             txtDireccion.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtDireccion.Location = new Point(157, 149);
+            txtDireccion.Location = new Point(179, 199);
+            txtDireccion.Margin = new Padding(3, 4, 3, 4);
             txtDireccion.Name = "txtDireccion";
             txtDireccion.PlaceholderText = "Direccion";
-            txtDireccion.Size = new Size(408, 29);
+            txtDireccion.Size = new Size(466, 34);
             txtDireccion.TabIndex = 2;
             // 
             // txtCorreo
             // 
             txtCorreo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtCorreo.Location = new Point(157, 219);
+            txtCorreo.Location = new Point(179, 292);
+            txtCorreo.Margin = new Padding(3, 4, 3, 4);
             txtCorreo.Name = "txtCorreo";
             txtCorreo.PlaceholderText = "Correo";
-            txtCorreo.Size = new Size(408, 29);
+            txtCorreo.Size = new Size(466, 34);
             txtCorreo.TabIndex = 3;
             // 
             // txtTelefono
             // 
             txtTelefono.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtTelefono.Location = new Point(157, 184);
+            txtTelefono.Location = new Point(179, 245);
+            txtTelefono.Margin = new Padding(3, 4, 3, 4);
             txtTelefono.Name = "txtTelefono";
             txtTelefono.PlaceholderText = "Telefono";
-            txtTelefono.Size = new Size(408, 29);
+            txtTelefono.Size = new Size(466, 34);
             txtTelefono.TabIndex = 4;
             // 
             // lblTutor
             // 
             lblTutor.AutoSize = true;
             lblTutor.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTutor.Location = new Point(353, 17);
+            lblTutor.Location = new Point(403, 23);
             lblTutor.Name = "lblTutor";
-            lblTutor.Size = new Size(123, 50);
+            lblTutor.Size = new Size(156, 62);
             lblTutor.TabIndex = 6;
             lblTutor.Text = "Tutor";
             // 
@@ -105,20 +110,23 @@
             btnNuevo.BackColor = SystemColors.ControlLightLight;
             btnNuevo.BackgroundImage = (Image)resources.GetObject("btnNuevo.BackgroundImage");
             btnNuevo.BackgroundImageLayout = ImageLayout.Stretch;
-            btnNuevo.Location = new Point(157, 261);
+            btnNuevo.Location = new Point(179, 348);
+            btnNuevo.Margin = new Padding(3, 4, 3, 4);
             btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(132, 51);
+            btnNuevo.Size = new Size(151, 68);
             btnNuevo.TabIndex = 7;
             btnNuevo.UseVisualStyleBackColor = false;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnGurdar
             // 
             btnGurdar.BackColor = SystemColors.ControlLightLight;
             btnGurdar.BackgroundImage = Properties.Resources.Guadar;
             btnGurdar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnGurdar.Location = new Point(295, 261);
+            btnGurdar.Location = new Point(337, 348);
+            btnGurdar.Margin = new Padding(3, 4, 3, 4);
             btnGurdar.Name = "btnGurdar";
-            btnGurdar.Size = new Size(132, 51);
+            btnGurdar.Size = new Size(151, 68);
             btnGurdar.TabIndex = 8;
             btnGurdar.UseVisualStyleBackColor = false;
             // 
@@ -127,19 +135,22 @@
             btnEliminar.BackColor = SystemColors.ControlLightLight;
             btnEliminar.BackgroundImage = (Image)resources.GetObject("btnEliminar.BackgroundImage");
             btnEliminar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnEliminar.Location = new Point(433, 261);
+            btnEliminar.Location = new Point(495, 348);
+            btnEliminar.Margin = new Padding(3, 4, 3, 4);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(132, 51);
+            btnEliminar.Size = new Size(151, 68);
             btnEliminar.TabIndex = 9;
             btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // pcbLogo
             // 
             pcbLogo.BorderStyle = BorderStyle.Fixed3D;
             pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
-            pcbLogo.Location = new Point(653, 70);
+            pcbLogo.Location = new Point(746, 93);
+            pcbLogo.Margin = new Padding(3, 4, 3, 4);
             pcbLogo.Name = "pcbLogo";
-            pcbLogo.Size = new Size(238, 160);
+            pcbLogo.Size = new Size(271, 212);
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbLogo.TabIndex = 10;
             pcbLogo.TabStop = false;
@@ -148,28 +159,32 @@
             // 
             dgvTutor.BackgroundColor = SystemColors.ControlLight;
             dgvTutor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTutor.Location = new Point(52, 318);
+            dgvTutor.Location = new Point(59, 424);
+            dgvTutor.Margin = new Padding(3, 4, 3, 4);
             dgvTutor.Name = "dgvTutor";
-            dgvTutor.Size = new Size(839, 160);
+            dgvTutor.RowHeadersWidth = 51;
+            dgvTutor.Size = new Size(959, 213);
             dgvTutor.TabIndex = 12;
+            dgvTutor.SelectionChanged += dgvTutor_SelectionChanged;
             // 
             // txtBuscar
             // 
             txtBuscar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtBuscar.Location = new Point(653, 279);
+            txtBuscar.Location = new Point(746, 372);
+            txtBuscar.Margin = new Padding(3, 4, 3, 4);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar";
-            txtBuscar.Size = new Size(238, 33);
+            txtBuscar.Size = new Size(271, 39);
             txtBuscar.TabIndex = 13;
             txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // frmTutores
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Formulario_Tutorpng;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(951, 514);
+            ClientSize = new Size(1087, 685);
             Controls.Add(txtBuscar);
             Controls.Add(dgvTutor);
             Controls.Add(pcbLogo);
@@ -183,6 +198,7 @@
             Controls.Add(txtParentesco);
             Controls.Add(txtNombreCompleto);
             DoubleBuffered = true;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmTutores";
             Text = "frmTutores";
             ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
