@@ -159,12 +159,14 @@
             textBox1.Font = new Font("Segoe UI Black", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(1029, 363);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(208, 35);
+            textBox1.Size = new Size(208, 36);
             textBox1.TabIndex = 4;
             textBox1.Text = "Buscar Carrera";
             // 
             // pcbLogo
             // 
+            pcbLogo.BackgroundImageLayout = ImageLayout.None;
+            pcbLogo.BorderStyle = BorderStyle.FixedSingle;
             pcbLogo.Image = Properties.Resources.sombrero;
             pcbLogo.Location = new Point(593, 30);
             pcbLogo.Name = "pcbLogo";
