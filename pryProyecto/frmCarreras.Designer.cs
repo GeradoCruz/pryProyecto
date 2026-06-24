@@ -99,7 +99,7 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.BackColor = SystemColors.Control;
+            btnEliminar.BackColor = SystemColors.HighlightText;
             btnEliminar.BackgroundImage = (Image)resources.GetObject("btnEliminar.BackgroundImage");
             btnEliminar.BackgroundImageLayout = ImageLayout.Stretch;
             btnEliminar.Location = new Point(527, 113);

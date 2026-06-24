@@ -17,7 +17,7 @@ namespace pryProyecto
 
                 }
             }
-           
+            //Application.Run(new frmCarreras());
         }
     }
 }

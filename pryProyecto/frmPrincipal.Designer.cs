@@ -36,12 +36,14 @@
             pcbDocente = new PictureBox();
             pnlContenedor = new Panel();
             pcbTitulo = new PictureBox();
+            pcbTutores = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pcbMenu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbAlumnos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbCarreras).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbUsuario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbDocente).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcbTitulo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbTutores).BeginInit();
             SuspendLayout();
             // 
             // pcbMenu
@@ -52,7 +54,7 @@
             pcbMenu.Location = new Point(12, 32);
             pcbMenu.Margin = new Padding(3, 2, 3, 2);
             pcbMenu.Name = "pcbMenu";
-            pcbMenu.Size = new Size(280, 698);
+            pcbMenu.Size = new Size(299, 698);
             pcbMenu.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbMenu.TabIndex = 0;
             pcbMenu.TabStop = false;
@@ -61,7 +63,7 @@
             // 
             pcbAlumnos.BackColor = Color.Transparent;
             pcbAlumnos.Image = (Image)resources.GetObject("pcbAlumnos.Image");
-            pcbAlumnos.Location = new Point(33, 126);
+            pcbAlumnos.Location = new Point(44, 126);
             pcbAlumnos.Margin = new Padding(3, 2, 3, 2);
             pcbAlumnos.Name = "pcbAlumnos";
             pcbAlumnos.Size = new Size(220, 96);
@@ -74,7 +76,7 @@
             // pcbCarreras
             // 
             pcbCarreras.Image = (Image)resources.GetObject("pcbCarreras.Image");
-            pcbCarreras.Location = new Point(33, 263);
+            pcbCarreras.Location = new Point(44, 238);
             pcbCarreras.Margin = new Padding(3, 2, 3, 2);
             pcbCarreras.Name = "pcbCarreras";
             pcbCarreras.Size = new Size(220, 96);
@@ -89,7 +91,7 @@
             // 
             pcbUsuario.BackColor = Color.Transparent;
             pcbUsuario.Image = (Image)resources.GetObject("pcbUsuario.Image");
-            pcbUsuario.Location = new Point(33, 537);
+            pcbUsuario.Location = new Point(44, 582);
             pcbUsuario.Margin = new Padding(3, 2, 3, 2);
             pcbUsuario.Name = "pcbUsuario";
             pcbUsuario.Size = new Size(220, 96);
@@ -102,7 +104,7 @@
             // pcbDocente
             // 
             pcbDocente.Image = (Image)resources.GetObject("pcbDocente.Image");
-            pcbDocente.Location = new Point(33, 404);
+            pcbDocente.Location = new Point(44, 351);
             pcbDocente.Margin = new Padding(3, 2, 3, 2);
             pcbDocente.Name = "pcbDocente";
             pcbDocente.Size = new Size(220, 96);
@@ -133,12 +135,26 @@
             pcbTitulo.TabIndex = 1;
             pcbTitulo.TabStop = false;
             // 
+            // pcbTutores
+            // 
+            pcbTutores.Image = (Image)resources.GetObject("pcbTutores.Image");
+            pcbTutores.Location = new Point(44, 468);
+            pcbTutores.Margin = new Padding(3, 2, 3, 2);
+            pcbTutores.Name = "pcbTutores";
+            pcbTutores.Size = new Size(220, 96);
+            pcbTutores.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbTutores.TabIndex = 7;
+            pcbTutores.TabStop = false;
+            pcbTutores.MouseDown += pcbGeneral_MouseDown;
+            pcbTutores.MouseUp += pcbGeneral_MouseUp;
+            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSlateGray;
             ClientSize = new Size(1370, 749);
+            Controls.Add(pcbTutores);
             Controls.Add(pnlContenedor);
             Controls.Add(pcbDocente);
             Controls.Add(pcbUsuario);
@@ -157,6 +173,7 @@
             ((System.ComponentModel.ISupportInitialize)pcbUsuario).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbDocente).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcbTitulo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbTutores).EndInit();
             ResumeLayout(false);
         }
 
@@ -169,5 +186,6 @@
         private PictureBox pcbDocente;
         private Panel pnlContenedor;
         private PictureBox pcbTitulo;
+        private PictureBox pcbTutores;
     }
 }
