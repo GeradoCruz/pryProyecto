@@ -51,11 +51,17 @@ namespace pryProyecto
             pcbAlumnos.Enabled = clsLogin.EsAdministrador || clsLogin.EsDocente;
         }
 
-      
+
         private void pcbCarreras_Click(object sender, EventArgs e)
         {
             principal = new clsPrincipal();
             principal.agregarAlContenedor(new frmCarreras(), pnlContenedor);
+        }
+
+        private void pcbTutores_Click(object sender, EventArgs e)
+        {
+            principal = new clsPrincipal();
+            principal.agregarAlContenedor(new frmTutores(), pnlContenedor);
         }
     }
 }
