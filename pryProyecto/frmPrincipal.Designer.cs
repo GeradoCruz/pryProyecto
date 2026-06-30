@@ -50,10 +50,11 @@
             // 
             pcbMenu.AccessibleRole = AccessibleRole.None;
             pcbMenu.BackColor = Color.Transparent;
+            pcbMenu.Dock = DockStyle.Left;
             pcbMenu.Image = (Image)resources.GetObject("pcbMenu.Image");
-            pcbMenu.Location = new Point(14, 43);
+            pcbMenu.Location = new Point(0, 0);
             pcbMenu.Name = "pcbMenu";
-            pcbMenu.Size = new Size(342, 931);
+            pcbMenu.Size = new Size(342, 999);
             pcbMenu.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbMenu.TabIndex = 0;
             pcbMenu.TabStop = false;
