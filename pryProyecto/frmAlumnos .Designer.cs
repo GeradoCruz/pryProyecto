@@ -1,0 +1,397 @@
+﻿namespace pryProyecto
+{
+    partial class frmAlumnos
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlumnos));
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            btnNuevo = new Button();
+            btnGuardar = new Button();
+            btnEliminar = new Button();
+            dgvCarreras = new DataGridView();
+            txtNombreCarrera = new TextBox();
+            txtmatricula = new TextBox();
+            txtPromedio = new TextBox();
+            txtDireccion = new TextBox();
+            txtAMaterno = new TextBox();
+            txtAPaterno = new TextBox();
+            txtNombreAlumno = new TextBox();
+            txtTelefono = new TextBox();
+            txtCorreo = new TextBox();
+            cmbTutores = new ComboBox();
+            cmbCarreras = new ComboBox();
+            pnlAlumno = new Panel();
+            label1 = new Label();
+            txtNombreUsuario = new TextBox();
+            txtPassword = new TextBox();
+            cmbPerfil = new ComboBox();
+            pnlUsuario = new Panel();
+            label2 = new Label();
+            pcbLogo = new PictureBox();
+            lblTitulo = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvCarreras).BeginInit();
+            pnlAlumno.SuspendLayout();
+            pnlUsuario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
+            SuspendLayout();
+            // 
+            // btnNuevo
+            // 
+            btnNuevo.BackColor = SystemColors.ButtonHighlight;
+            btnNuevo.BackgroundImage = (Image)resources.GetObject("btnNuevo.BackgroundImage");
+            btnNuevo.BackgroundImageLayout = ImageLayout.Stretch;
+            btnNuevo.ForeColor = SystemColors.Control;
+            btnNuevo.Location = new Point(14, 404);
+            btnNuevo.Margin = new Padding(3, 4, 3, 4);
+            btnNuevo.Name = "btnNuevo";
+            btnNuevo.Size = new Size(151, 72);
+            btnNuevo.TabIndex = 7;
+            btnNuevo.UseVisualStyleBackColor = false;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.BackColor = SystemColors.ButtonHighlight;
+            btnGuardar.BackgroundImage = (Image)resources.GetObject("btnGuardar.BackgroundImage");
+            btnGuardar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnGuardar.Location = new Point(194, 404);
+            btnGuardar.Margin = new Padding(3, 4, 3, 4);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(151, 72);
+            btnGuardar.TabIndex = 6;
+            btnGuardar.UseVisualStyleBackColor = false;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.BackColor = SystemColors.HighlightText;
+            btnEliminar.BackgroundImage = (Image)resources.GetObject("btnEliminar.BackgroundImage");
+            btnEliminar.BackgroundImageLayout = ImageLayout.Stretch;
+            btnEliminar.Location = new Point(378, 404);
+            btnEliminar.Margin = new Padding(3, 4, 3, 4);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(145, 72);
+            btnEliminar.TabIndex = 5;
+            btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // dgvCarreras
+            // 
+            dgvCarreras.AllowUserToAddRows = false;
+            dataGridViewCellStyle7.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle7.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle7.ForeColor = Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = Color.Blue;
+            dgvCarreras.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dgvCarreras.BackgroundColor = SystemColors.ControlLight;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.Coral;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
+            dgvCarreras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dgvCarreras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = SystemColors.InactiveCaption;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle9.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
+            dgvCarreras.DefaultCellStyle = dataGridViewCellStyle9;
+            dgvCarreras.EnableHeadersVisualStyles = false;
+            dgvCarreras.Location = new Point(12, 484);
+            dgvCarreras.Margin = new Padding(3, 4, 3, 4);
+            dgvCarreras.Name = "dgvCarreras";
+            dgvCarreras.RowHeadersWidth = 51;
+            dgvCarreras.RowTemplate.Height = 45;
+            dgvCarreras.Size = new Size(1063, 188);
+            dgvCarreras.TabIndex = 8;
+            // 
+            // txtNombreCarrera
+            // 
+            txtNombreCarrera.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtNombreCarrera.Location = new Point(674, 437);
+            txtNombreCarrera.Margin = new Padding(3, 4, 3, 4);
+            txtNombreCarrera.Name = "txtNombreCarrera";
+            txtNombreCarrera.PlaceholderText = "Buscar Alumno";
+            txtNombreCarrera.Size = new Size(401, 39);
+            txtNombreCarrera.TabIndex = 9;
+            // 
+            // txtmatricula
+            // 
+            txtmatricula.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            txtmatricula.Location = new Point(29, 24);
+            txtmatricula.Name = "txtmatricula";
+            txtmatricula.PlaceholderText = "Matricula";
+            txtmatricula.Size = new Size(280, 38);
+            txtmatricula.TabIndex = 10;
+            // 
+            // txtPromedio
+            // 
+            txtPromedio.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            txtPromedio.Location = new Point(387, 111);
+            txtPromedio.Name = "txtPromedio";
+            txtPromedio.PlaceholderText = "Promedio";
+            txtPromedio.Size = new Size(280, 38);
+            txtPromedio.TabIndex = 11;
+            // 
+            // txtDireccion
+            // 
+            txtDireccion.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            txtDireccion.Location = new Point(29, 200);
+            txtDireccion.Name = "txtDireccion";
+            txtDireccion.PlaceholderText = "Direccion";
+            txtDireccion.Size = new Size(280, 38);
+            txtDireccion.TabIndex = 14;
+            // 
+            // txtAMaterno
+            // 
+            txtAMaterno.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            txtAMaterno.Location = new Point(29, 156);
+            txtAMaterno.Name = "txtAMaterno";
+            txtAMaterno.PlaceholderText = "Apellido Materno";
+            txtAMaterno.Size = new Size(280, 38);
+            txtAMaterno.TabIndex = 15;
+            // 
+            // txtAPaterno
+            // 
+            txtAPaterno.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            txtAPaterno.Location = new Point(29, 112);
+            txtAPaterno.Name = "txtAPaterno";
+            txtAPaterno.PlaceholderText = "Apellido Paterno";
+            txtAPaterno.Size = new Size(280, 38);
+            txtAPaterno.TabIndex = 16;
+            // 
+            // txtNombreAlumno
+            // 
+            txtNombreAlumno.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            txtNombreAlumno.Location = new Point(29, 68);
+            txtNombreAlumno.Name = "txtNombreAlumno";
+            txtNombreAlumno.PlaceholderText = "Nombre Alumno";
+            txtNombreAlumno.Size = new Size(280, 38);
+            txtNombreAlumno.TabIndex = 17;
+            // 
+            // txtTelefono
+            // 
+            txtTelefono.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            txtTelefono.Location = new Point(387, 23);
+            txtTelefono.Name = "txtTelefono";
+            txtTelefono.PlaceholderText = "Télefono";
+            txtTelefono.Size = new Size(280, 38);
+            txtTelefono.TabIndex = 18;
+            // 
+            // txtCorreo
+            // 
+            txtCorreo.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            txtCorreo.Location = new Point(387, 67);
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.PlaceholderText = "Correo Electronico";
+            txtCorreo.Size = new Size(280, 38);
+            txtCorreo.TabIndex = 19;
+            // 
+            // cmbTutores
+            // 
+            cmbTutores.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            cmbTutores.FormattingEnabled = true;
+            cmbTutores.Location = new Point(387, 155);
+            cmbTutores.Name = "cmbTutores";
+            cmbTutores.Size = new Size(280, 39);
+            cmbTutores.TabIndex = 20;
+            // 
+            // cmbCarreras
+            // 
+            cmbCarreras.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            cmbCarreras.FormattingEnabled = true;
+            cmbCarreras.Location = new Point(387, 199);
+            cmbCarreras.Name = "cmbCarreras";
+            cmbCarreras.Size = new Size(280, 39);
+            cmbCarreras.TabIndex = 21;
+            // 
+            // pnlAlumno
+            // 
+            pnlAlumno.BackColor = SystemColors.ActiveCaption;
+            pnlAlumno.BorderStyle = BorderStyle.Fixed3D;
+            pnlAlumno.Controls.Add(cmbCarreras);
+            pnlAlumno.Controls.Add(cmbTutores);
+            pnlAlumno.Controls.Add(txtCorreo);
+            pnlAlumno.Controls.Add(txtTelefono);
+            pnlAlumno.Controls.Add(txtNombreAlumno);
+            pnlAlumno.Controls.Add(txtAPaterno);
+            pnlAlumno.Controls.Add(txtAMaterno);
+            pnlAlumno.Controls.Add(txtDireccion);
+            pnlAlumno.Controls.Add(txtPromedio);
+            pnlAlumno.Controls.Add(txtmatricula);
+            pnlAlumno.ForeColor = SystemColors.ButtonHighlight;
+            pnlAlumno.Location = new Point(12, 145);
+            pnlAlumno.Name = "pnlAlumno";
+            pnlAlumno.Size = new Size(697, 252);
+            pnlAlumno.TabIndex = 22;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = SystemColors.ActiveCaption;
+            label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(29, 120);
+            label1.Name = "label1";
+            label1.Size = new Size(100, 31);
+            label1.TabIndex = 23;
+            label1.Text = "Alumno";
+            // 
+            // txtNombreUsuario
+            // 
+            txtNombreUsuario.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            txtNombreUsuario.Location = new Point(21, 22);
+            txtNombreUsuario.Name = "txtNombreUsuario";
+            txtNombreUsuario.PlaceholderText = "Nombre Usuario";
+            txtNombreUsuario.Size = new Size(280, 38);
+            txtNombreUsuario.TabIndex = 24;
+            // 
+            // txtPassword
+            // 
+            txtPassword.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            txtPassword.Location = new Point(21, 66);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PlaceholderText = "Contraseña";
+            txtPassword.Size = new Size(280, 38);
+            txtPassword.TabIndex = 25;
+            // 
+            // cmbPerfil
+            // 
+            cmbPerfil.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
+            cmbPerfil.FormattingEnabled = true;
+            cmbPerfil.Location = new Point(21, 156);
+            cmbPerfil.Name = "cmbPerfil";
+            cmbPerfil.Size = new Size(280, 39);
+            cmbPerfil.TabIndex = 26;
+            // 
+            // pnlUsuario
+            // 
+            pnlUsuario.BackColor = SystemColors.ActiveCaption;
+            pnlUsuario.BorderStyle = BorderStyle.Fixed3D;
+            pnlUsuario.Controls.Add(cmbPerfil);
+            pnlUsuario.Controls.Add(txtPassword);
+            pnlUsuario.Controls.Add(txtNombreUsuario);
+            pnlUsuario.Location = new Point(752, 145);
+            pnlUsuario.Name = "pnlUsuario";
+            pnlUsuario.Size = new Size(321, 252);
+            pnlUsuario.TabIndex = 27;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = SystemColors.ActiveCaption;
+            label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(773, 120);
+            label2.Name = "label2";
+            label2.Size = new Size(97, 31);
+            label2.TabIndex = 28;
+            label2.Text = "Usuario";
+            // 
+            // pcbLogo
+            // 
+            pcbLogo.BackColor = SystemColors.ButtonFace;
+            pcbLogo.BackgroundImageLayout = ImageLayout.Center;
+            pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
+            pcbLogo.Location = new Point(609, 13);
+            pcbLogo.Margin = new Padding(3, 4, 3, 4);
+            pcbLogo.Name = "pcbLogo";
+            pcbLogo.Size = new Size(100, 83);
+            pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcbLogo.TabIndex = 30;
+            pcbLogo.TabStop = false;
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.BackColor = SystemColors.ButtonFace;
+            lblTitulo.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(378, 18);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(222, 62);
+            lblTitulo.TabIndex = 29;
+            lblTitulo.Text = "Alumnos";
+            // 
+            // frmAlumnos
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1087, 685);
+            Controls.Add(pcbLogo);
+            Controls.Add(lblTitulo);
+            Controls.Add(label2);
+            Controls.Add(pnlUsuario);
+            Controls.Add(label1);
+            Controls.Add(pnlAlumno);
+            Controls.Add(txtNombreCarrera);
+            Controls.Add(dgvCarreras);
+            Controls.Add(btnNuevo);
+            Controls.Add(btnGuardar);
+            Controls.Add(btnEliminar);
+            Name = "frmAlumnos";
+            Text = "frmAlumnos";
+            ((System.ComponentModel.ISupportInitialize)dgvCarreras).EndInit();
+            pnlAlumno.ResumeLayout(false);
+            pnlAlumno.PerformLayout();
+            pnlUsuario.ResumeLayout(false);
+            pnlUsuario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Button btnNuevo;
+        private Button btnGuardar;
+        private Button btnEliminar;
+        private DataGridView dgvCarreras;
+        private TextBox txtNombreCarrera;
+        private TextBox txtmatricula;
+        private TextBox txtPromedio;
+        private TextBox txtDireccion;
+        private TextBox txtAMaterno;
+        private TextBox txtAPaterno;
+        private TextBox txtNombreAlumno;
+        private TextBox txtTelefono;
+        private TextBox txtCorreo;
+        private ComboBox cmbTutores;
+        private ComboBox cmbCarreras;
+        private Panel pnlAlumno;
+        private Label label1;
+        private TextBox txtNombreUsuario;
+        private TextBox txtPassword;
+        private ComboBox cmbPerfil;
+        private Panel pnlUsuario;
+        private Label label2;
+        private PictureBox pcbLogo;
+        private Label lblTitulo;
+    }
+}
