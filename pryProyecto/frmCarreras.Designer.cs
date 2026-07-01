@@ -70,7 +70,7 @@
             pnlAgrupaControles.ForeColor = SystemColors.AppWorkspace;
             pnlAgrupaControles.Location = new Point(66, 100);
             pnlAgrupaControles.Name = "pnlAgrupaControles";
-            pnlAgrupaControles.Size = new Size(822, 182);
+            pnlAgrupaControles.Size = new Size(844, 182);
             pnlAgrupaControles.TabIndex = 2;
             // 
             // btnNuevo
@@ -159,7 +159,7 @@
             dgvCarreras.Name = "dgvCarreras";
             dgvCarreras.RowHeadersWidth = 51;
             dgvCarreras.RowTemplate.Height = 45;
-            dgvCarreras.Size = new Size(822, 141);
+            dgvCarreras.Size = new Size(844, 177);
             dgvCarreras.TabIndex = 3;
             dgvCarreras.SelectionChanged += dgvCarreras_SelectionChanged;
             // 
@@ -187,7 +187,7 @@
             // txtNombreCarrera
             // 
             txtNombreCarrera.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombreCarrera.Location = new Point(698, 289);
+            txtNombreCarrera.Location = new Point(734, 289);
             txtNombreCarrera.Name = "txtNombreCarrera";
             txtNombreCarrera.PlaceholderText = "Buscar Carrera";
             txtNombreCarrera.Size = new Size(177, 33);
@@ -201,7 +201,7 @@
             BackColor = SystemColors.Control;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(951, 514);
+            ClientSize = new Size(975, 546);
             Controls.Add(txtNombreCarrera);
             Controls.Add(pcbLogo);
             Controls.Add(textBox1);

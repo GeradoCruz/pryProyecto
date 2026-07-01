@@ -142,7 +142,7 @@
             // 
             pcbLogo.BorderStyle = BorderStyle.Fixed3D;
             pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
-            pcbLogo.Location = new Point(653, 70);
+            pcbLogo.Location = new Point(682, 70);
             pcbLogo.Name = "pcbLogo";
             pcbLogo.Size = new Size(238, 160);
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -175,14 +175,14 @@
             dgvTutor.Name = "dgvTutor";
             dgvTutor.RowHeadersWidth = 51;
             dgvTutor.RowTemplate.Height = 35;
-            dgvTutor.Size = new Size(839, 160);
+            dgvTutor.Size = new Size(874, 205);
             dgvTutor.TabIndex = 12;
             dgvTutor.SelectionChanged += dgvTutor_SelectionChanged;
             // 
             // txtBuscar
             // 
             txtBuscar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtBuscar.Location = new Point(653, 279);
+            txtBuscar.Location = new Point(688, 279);
             txtBuscar.Name = "txtBuscar";
             txtBuscar.PlaceholderText = "Buscar";
             txtBuscar.Size = new Size(238, 33);
@@ -195,7 +195,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Formulario_Tutorpng;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(951, 514);
+            ClientSize = new Size(975, 546);
             Controls.Add(txtBuscar);
             Controls.Add(dgvTutor);
             Controls.Add(pcbLogo);

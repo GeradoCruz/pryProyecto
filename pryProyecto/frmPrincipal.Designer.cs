@@ -49,13 +49,13 @@
             // pcbMenu
             // 
             pcbMenu.AccessibleRole = AccessibleRole.None;
+            pcbMenu.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             pcbMenu.BackColor = Color.Transparent;
-            pcbMenu.Dock = DockStyle.Left;
             pcbMenu.Image = (Image)resources.GetObject("pcbMenu.Image");
             pcbMenu.Location = new Point(0, 0);
             pcbMenu.Margin = new Padding(3, 2, 3, 2);
             pcbMenu.Name = "pcbMenu";
-            pcbMenu.Size = new Size(299, 562);
+            pcbMenu.Size = new Size(299, 749);
             pcbMenu.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbMenu.TabIndex = 0;
             pcbMenu.TabStop = false;
@@ -118,21 +118,23 @@
             // 
             // pnlContenedor
             // 
+            pnlContenedor.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pnlContenedor.BackColor = Color.White;
-            pnlContenedor.Location = new Point(367, 167);
+            pnlContenedor.Location = new Point(340, 148);
             pnlContenedor.Margin = new Padding(3, 2, 3, 2);
             pnlContenedor.Name = "pnlContenedor";
-            pnlContenedor.Size = new Size(967, 553);
+            pnlContenedor.Size = new Size(991, 585);
             pnlContenedor.TabIndex = 6;
             // 
             // pcbTitulo
             // 
+            pcbTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             pcbTitulo.BackColor = Color.Transparent;
             pcbTitulo.Image = (Image)resources.GetObject("pcbTitulo.Image");
-            pcbTitulo.Location = new Point(367, 32);
+            pcbTitulo.Location = new Point(340, 32);
             pcbTitulo.Margin = new Padding(3, 2, 3, 2);
             pcbTitulo.Name = "pcbTitulo";
-            pcbTitulo.Size = new Size(967, 101);
+            pcbTitulo.Size = new Size(991, 101);
             pcbTitulo.SizeMode = PictureBoxSizeMode.StretchImage;
             pcbTitulo.TabIndex = 1;
             pcbTitulo.TabStop = false;
@@ -156,7 +158,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSlateGray;
-            ClientSize = new Size(1199, 562);
+            ClientSize = new Size(1370, 749);
             Controls.Add(pcbTutores);
             Controls.Add(pnlContenedor);
             Controls.Add(pcbDocente);

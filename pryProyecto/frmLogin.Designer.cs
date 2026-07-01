@@ -121,6 +121,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 2, 3, 2);
             Name = "frmLogin";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Login";
             ((System.ComponentModel.ISupportInitialize)pcbImagenLogin).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

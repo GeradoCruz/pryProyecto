@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlumnos));
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             btnNuevo = new Button();
             btnGuardar = new Button();
             btnEliminar = new Button();
@@ -68,7 +68,7 @@
             btnNuevo.BackgroundImage = (Image)resources.GetObject("btnNuevo.BackgroundImage");
             btnNuevo.BackgroundImageLayout = ImageLayout.Stretch;
             btnNuevo.ForeColor = SystemColors.Control;
-            btnNuevo.Location = new Point(12, 303);
+            btnNuevo.Location = new Point(25, 303);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(132, 54);
             btnNuevo.TabIndex = 7;
@@ -79,7 +79,7 @@
             btnGuardar.BackColor = SystemColors.ButtonHighlight;
             btnGuardar.BackgroundImage = (Image)resources.GetObject("btnGuardar.BackgroundImage");
             btnGuardar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnGuardar.Location = new Point(170, 303);
+            btnGuardar.Location = new Point(183, 303);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(132, 54);
             btnGuardar.TabIndex = 6;
@@ -90,7 +90,7 @@
             btnEliminar.BackColor = SystemColors.HighlightText;
             btnEliminar.BackgroundImage = (Image)resources.GetObject("btnEliminar.BackgroundImage");
             btnEliminar.BackgroundImageLayout = ImageLayout.Stretch;
-            btnEliminar.Location = new Point(331, 303);
+            btnEliminar.Location = new Point(344, 303);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(127, 54);
             btnEliminar.TabIndex = 5;
@@ -99,41 +99,41 @@
             // dgvAlumnos
             // 
             dgvAlumnos.AllowUserToAddRows = false;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(192, 255, 255);
-            dataGridViewCellStyle4.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = Color.Blue;
-            dgvAlumnos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Blue;
+            dgvAlumnos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvAlumnos.BackgroundColor = SystemColors.ControlLight;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.Coral;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Control;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvAlumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.Coral;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvAlumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvAlumnos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.InactiveCaption;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dgvAlumnos.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.InactiveCaption;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvAlumnos.DefaultCellStyle = dataGridViewCellStyle3;
             dgvAlumnos.EnableHeadersVisualStyles = false;
-            dgvAlumnos.Location = new Point(10, 363);
+            dgvAlumnos.Location = new Point(23, 363);
             dgvAlumnos.Name = "dgvAlumnos";
             dgvAlumnos.RowHeadersWidth = 51;
             dgvAlumnos.RowTemplate.Height = 45;
-            dgvAlumnos.Size = new Size(930, 141);
+            dgvAlumnos.Size = new Size(930, 171);
             dgvAlumnos.TabIndex = 8;
             // 
             // txtNombreCarrera
             // 
             txtNombreCarrera.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombreCarrera.Location = new Point(590, 328);
+            txtNombreCarrera.Location = new Point(602, 324);
             txtNombreCarrera.Name = "txtNombreCarrera";
             txtNombreCarrera.PlaceholderText = "Buscar Alumno";
             txtNombreCarrera.Size = new Size(351, 33);
@@ -254,7 +254,7 @@
             pnlAlumno.Controls.Add(txtPromedio);
             pnlAlumno.Controls.Add(txtMatricula);
             pnlAlumno.ForeColor = SystemColors.ButtonHighlight;
-            pnlAlumno.Location = new Point(10, 109);
+            pnlAlumno.Location = new Point(23, 109);
             pnlAlumno.Margin = new Padding(3, 2, 3, 2);
             pnlAlumno.Name = "pnlAlumno";
             pnlAlumno.Size = new Size(610, 190);
@@ -265,7 +265,7 @@
             label1.AutoSize = true;
             label1.BackColor = SystemColors.ActiveCaption;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(25, 90);
+            label1.Location = new Point(38, 90);
             label1.Name = "label1";
             label1.Size = new Size(83, 25);
             label1.TabIndex = 23;
@@ -308,7 +308,7 @@
             pnlUsuario.Controls.Add(cmbPerfil);
             pnlUsuario.Controls.Add(txtPassword);
             pnlUsuario.Controls.Add(txtNombreUsuario);
-            pnlUsuario.Location = new Point(658, 109);
+            pnlUsuario.Location = new Point(671, 109);
             pnlUsuario.Margin = new Padding(3, 2, 3, 2);
             pnlUsuario.Name = "pnlUsuario";
             pnlUsuario.Size = new Size(281, 190);
@@ -319,7 +319,7 @@
             label2.AutoSize = true;
             label2.BackColor = SystemColors.ActiveCaption;
             label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(676, 90);
+            label2.Location = new Point(689, 90);
             label2.Name = "label2";
             label2.Size = new Size(81, 25);
             label2.TabIndex = 28;
@@ -330,7 +330,7 @@
             pcbLogo.BackColor = SystemColors.ButtonFace;
             pcbLogo.BackgroundImageLayout = ImageLayout.Center;
             pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
-            pcbLogo.Location = new Point(533, 10);
+            pcbLogo.Location = new Point(546, 10);
             pcbLogo.Name = "pcbLogo";
             pcbLogo.Size = new Size(88, 62);
             pcbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -342,7 +342,7 @@
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = SystemColors.ButtonFace;
             lblTitulo.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitulo.Location = new Point(331, 14);
+            lblTitulo.Location = new Point(344, 14);
             lblTitulo.Name = "lblTitulo";
             lblTitulo.Size = new Size(176, 50);
             lblTitulo.TabIndex = 29;
@@ -352,7 +352,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(951, 514);
+            ClientSize = new Size(975, 546);
             Controls.Add(pcbLogo);
             Controls.Add(lblTitulo);
             Controls.Add(label2);

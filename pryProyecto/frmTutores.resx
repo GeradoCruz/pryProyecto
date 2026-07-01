@@ -121,7 +121,7 @@
   <data name="btnNuevo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABSAAAAMVCAYAAABnclo1AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAy
-        vwAAMr8BereA9gAA/7JJREFUeF7s/QeQXWef33fOaEYeaYI0mtGMNJJs2daqJLtkW9pde3e15bW3nKpc
+        vgAAMr4BqPBiEgAA/7JJREFUeF7s/QeQXWef33fOaEYeaYI0mtGMNJJs2daqJLtkW9pde3e15bW3nKpc
         rt0ty2Nl601MQHeDAYnpxRsY0A2QYAQIgAEEIwCCQDdyTgSYwQRmIoe+oXNANzr9t57T3UDj/zzn3nOe
         e7rvuae/36pfNV6+JAjyJbt7PvOc8/zGbxARERERERERERERERERERERERERERERERERERERERERERER
         ERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERER
@@ -1566,7 +1566,7 @@
   <data name="btnGurdar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABV8AAAKiCAYAAADBiKxZAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAy
-        vwAAMr8BereA9gAAirRJREFUeF7t3QeUXOV9/+FXFZAQIHrvvWN670VIQmDTEQiBAIkuCVyxTbGNe3di
+        vgAAMr4BqPBiEgAAirRJREFUeF7t3QeUXOV9/+FXFZAQIHrvvWN670VIQmDTEQiBAIkuCVyxTbGNe3di
         OzaOEydOc4lj/53EieOGC+6FLnoVTfTi2Pz+546k2HpnF/buztyZO/s853wOyTHsfWe0Myt9GWZSqp8R
         KaWtUkqnppTemlL665TSD1JKt6aUHkgpLUop/T6lFJLUxl5OKT2bUrolpXRdSunAlNKY/AkLAAAAoNtt
         mlI6N6X0uZTSz1NK96eUFqaUnkgpPZ1SemHJ4PqHlNIfl4wi+VAiSa2ueK4pnnuK56FHU0p/k1LaJX8C
@@ -2164,7 +2164,7 @@
   <data name="btnEliminar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABYgAAAKtCAYAAACNE4q8AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAy
-        vwAAMr8BereA9gAA7VpJREFUeF7s/QeUHPXB5vv7ff97z713d2/Y/a8NSJO6qrurJ+cgzUgzo1Ek5yRy
+        vgAAMr4BqPBiEgAA7VpJREFUeF7s/QeUHPXB5vv7ff97z713d2/Y/a8NSJO6qrurJ+cgzUgzo1Ek5yRy
         EEFI5JxzDkIIEMEBDBhnsME2OIDBJueMyTlnEQXPPb/qkW1+LWNVqapD9fdzzvfg3RfUpZmekepRqepb
         30LZa2tb479ls9m2TCa3set6+zuOd57rete7bu5Ox8k94ji5Z13Xe8dxcp+6bu4r182JiIio2nMc733X
         9V5xnNzTrpt7MJXybnEc70eu653surldHadxzPO8BvvXXQAAAAAASqquLrdWJpNbx3Vzh6bT3tWu693m
