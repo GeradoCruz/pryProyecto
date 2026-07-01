@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace pryProyecto
 {
@@ -110,7 +109,7 @@ namespace pryProyecto
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    //valuemember es el idCarrera y el DisplayMember es el nombre carrera
+                    //valueMember es el idCarrera y el DisplayMember es el nombre carrera
                     string sql = "SELECT idCarrera, nombreCarrera FROM tblcarreras;";
                     using (consulta = new MySqlDataAdapter(sql, conexion))
                     {
@@ -121,6 +120,66 @@ namespace pryProyecto
             catch (Exception ex)
             {
                 throw new Exception("Error al obtener el catálogo de carreras: " + ex.Message);
+            }
+            return tabla;
+        }
+        public void LimpiarPanel(Panel panelDestino)
+        {
+            foreach (Control control in panelDestino.Controls)
+            {
+                if (control is TextBox)
+                {
+                    ((TextBox)control).Clear();
+                }
+
+                else if (control is ComboBox)
+                {
+                    ((ComboBox)control).SelectedIndex = -1;
+                }
+            }
+        }
+        public DataTable Consultar() 
+        {
+            tabla = new DataTable();
+            try
+            {
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    string sql = "SELECT A.matricula AS Matricula, " +
+                                 "A.nombreAlumno AS Nombre, " +
+                                 "A.apellidoP AS 'A. Paterno', " +
+                                 "A.apellidoM AS 'A. Materno', " +
+                                 "C.nombreCarrera AS Carrera, " +
+                                 "T.nombreTutor AS Tutor, " +
+                                 "U.nombreUsuario AS Usuario, " +
+                                 "U.password AS password, " +
+                                 "U.perfil AS perfil, " +
+                                 "A.direccion, " +
+                                 "A.telefono, " +
+                                 "A.correo, " +
+                                 "A.promedioBachillerato, " +
+                                 "A.foto, " +
+                                 "A.idTutor, " +
+                                 "A.idCarrera, " +
+                                 "A.idUsuario " +
+                                 "FROM tblalumnos A " +
+                                 "INNER JOIN tblcarreras C ON A.idCarrera = C.idCarrera " +
+                                 "INNER JOIN tbltutores T ON A.idTutor = T.idTutor " +
+                                 "INNER JOIN tblusuarios U ON A.idUsuario = U.idUsuario WHERE A.matricula LIKE @matricula;";
+                    using (var consultar = new MySqlCommand(sql, conexion))
+                    {
+                        consultar.Parameters.AddWithValue("@matricula", "%" + matricula + "%");
+                        using (consulta = new MySqlDataAdapter(consultar))
+                        {
+                            consulta.Fill(tabla);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error en la conexion" + ex.Message);
             }
             return tabla;
         }
