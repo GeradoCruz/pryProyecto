@@ -96,6 +96,27 @@ namespace pryProyecto
             }
             return tabla;
         }
-       
+        public DataTable ObtenerCarreras()
+        {
+            tabla = new DataTable();
+            try
+            {
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    //valuemember es el idCarrera y el DisplayMember es el nombre carrera
+                    string sql = "SELECT idCarrera, nombreCarrera FROM tblcarreras;";
+                    using (consulta = new MySqlDataAdapter(sql, conexion))
+                    {
+                        consulta.Fill(tabla);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener el catálogo de carreras: " + ex.Message);
+            }
+            return tabla;
+        }
     }
 }
