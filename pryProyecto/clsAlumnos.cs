@@ -74,5 +74,27 @@ namespace pryProyecto
             }
             return tabla;
         }
+        public DataTable ObtenerTutores()
+        {
+            tabla = new DataTable();
+            try
+            {
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    
+                    string sql = "SELECT idTutores, nombreTutores FROM tblTutores;";
+                    using (consulta = new MySqlDataAdapter(sql, conexion))
+                    {
+                        consulta.Fill(tabla);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener el catálogo de carreras: " + ex.Message);
+            }
+            return tabla;
+        }
     }
 }
