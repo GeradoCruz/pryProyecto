@@ -31,13 +31,13 @@ namespace pryProyecto
             try
             {
                 dgvAlumnos.DataSource = alumnos.CargarDataGrid();
-                dgvAlumnos.Columns["Usuario"].Visible = true;
-                dgvAlumnos.Columns["password"].Visible = true;
-                dgvAlumnos.Columns["perfil"].Visible = true;
-                dgvAlumnos.Columns["direccion"].Visible = true;
-                dgvAlumnos.Columns["correo"].Visible = true;
+                dgvAlumnos.Columns["Usuario"].Visible = false;
+                dgvAlumnos.Columns["password"].Visible = false;
+                dgvAlumnos.Columns["perfil"].Visible = false;
+                dgvAlumnos.Columns["direccion"].Visible = false;
+                dgvAlumnos.Columns["correo"].Visible = false;
                 dgvAlumnos.Columns["telefono"].Visible = true;
-                dgvAlumnos.Columns["promedioBachillerato"].Visible = true;
+                dgvAlumnos.Columns["promedioBachillerato"].Visible = false;
                 dgvAlumnos.Columns["idTutor"].Visible = false;
                 dgvAlumnos.Columns["idCarrera"].Visible = false;
                 dgvAlumnos.Columns["idUsuario"].Visible = false;
