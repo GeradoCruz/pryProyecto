@@ -48,19 +48,26 @@ namespace pryProyecto
                 using (var conexion = conexionDB.AbrirConexion())
                 {
                     string sql = "SELECT A.matricula AS Matricula, " +
-                                 "A.nombreALUMNO AS Nombre, " +
+                                 "A.nombreAlumno AS Nombre, " +
                                  "A.apellidoP AS 'A. Paterno', " +
                                  "A.apellidoM AS 'A. Materno', " +
                                  "C.nombreCarrera AS Carrera, " +
                                  "T.nombreTutor AS Tutor, " +
-                                 "U.vchnombreUsuario AS Usuario, " +
-                                 "A.direccion, A.telefono, A.correo, " +
-                                 "A.promedioBachillerato, A.foto, " +
-                                 "A.idTutor, A.idCarrera, A.idUsuario " +
+                                 "U.nombreUsuario AS Usuario, " +
+                                 "U.password AS password, " +
+                                 "U.perfil AS perfil, " +
+                                 "A.direccion, " +
+                                 "A.telefono, " +
+                                 "A.correo, " +
+                                 "A.promedioBachillerato, " +
+                                 "A.foto, " +
+                                 "A.idTutor, " +
+                                 "A.idCarrera, " +
+                                 "A.idUsuario " +
                                  "FROM tblalumnos A " +
                                  "INNER JOIN tblcarreras C ON A.idCarrera = C.idCarrera " +
                                  "INNER JOIN tbltutores T ON A.idTutor = T.idTutor " +
-                                 "INNER JOIN tblusuarios U ON A.idUsuario = U.intidUsuario;";
+                                 "INNER JOIN tblusuarios U ON A.idUsuario = U.idUsuario;";
 
                     using (consulta = new MySqlDataAdapter(sql, conexion))
                     {
@@ -82,8 +89,8 @@ namespace pryProyecto
                 clsConexion conexionBD = new clsConexion();
                 using (var conexion = conexionBD.AbrirConexion())
                 {
-                    
-                    string sql = "SELECT idTutores, nombreTutores FROM tblTutores;";
+
+                    string sql = "SELECT idTutor, nombreTutor FROM tblTutores;";
                     using (consulta = new MySqlDataAdapter(sql, conexion))
                     {
                         consulta.Fill(tabla);
@@ -119,4 +126,5 @@ namespace pryProyecto
             return tabla;
         }
     }
+
 }
