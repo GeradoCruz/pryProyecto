@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlumnos));
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             btnNuevo = new Button();
             btnGuardar = new Button();
             btnEliminar = new Button();
-            dgvCarreras = new DataGridView();
+            dgvAlumnos = new DataGridView();
             txtNombreCarrera = new TextBox();
             txtmatricula = new TextBox();
             txtPromedio = new TextBox();
@@ -56,7 +56,7 @@
             label2 = new Label();
             pcbLogo = new PictureBox();
             lblTitulo = new Label();
-            ((System.ComponentModel.ISupportInitialize)dgvCarreras).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlumnos).BeginInit();
             pnlAlumno.SuspendLayout();
             pnlUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
@@ -99,40 +99,40 @@
             btnEliminar.TabIndex = 5;
             btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // dgvCarreras
+            // dgvAlumnos
             // 
-            dgvCarreras.AllowUserToAddRows = false;
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(192, 255, 255);
-            dataGridViewCellStyle7.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle7.ForeColor = Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = Color.Blue;
-            dgvCarreras.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dgvCarreras.BackgroundColor = SystemColors.ControlLight;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.Coral;
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Control;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.Desktop;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            dgvCarreras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            dgvCarreras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = SystemColors.InactiveCaption;
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle9.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.False;
-            dgvCarreras.DefaultCellStyle = dataGridViewCellStyle9;
-            dgvCarreras.EnableHeadersVisualStyles = false;
-            dgvCarreras.Location = new Point(12, 484);
-            dgvCarreras.Margin = new Padding(3, 4, 3, 4);
-            dgvCarreras.Name = "dgvCarreras";
-            dgvCarreras.RowHeadersWidth = 51;
-            dgvCarreras.RowTemplate.Height = 45;
-            dgvCarreras.Size = new Size(1063, 188);
-            dgvCarreras.TabIndex = 8;
+            dgvAlumnos.AllowUserToAddRows = false;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(192, 255, 255);
+            dataGridViewCellStyle4.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Blue;
+            dgvAlumnos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgvAlumnos.BackgroundColor = SystemColors.ControlLight;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.Coral;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.Desktop;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvAlumnos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dgvAlumnos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.InactiveCaption;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvAlumnos.DefaultCellStyle = dataGridViewCellStyle6;
+            dgvAlumnos.EnableHeadersVisualStyles = false;
+            dgvAlumnos.Location = new Point(12, 484);
+            dgvAlumnos.Margin = new Padding(3, 4, 3, 4);
+            dgvAlumnos.Name = "dgvAlumnos";
+            dgvAlumnos.RowHeadersWidth = 51;
+            dgvAlumnos.RowTemplate.Height = 45;
+            dgvAlumnos.Size = new Size(1063, 188);
+            dgvAlumnos.TabIndex = 8;
             // 
             // txtNombreCarrera
             // 
@@ -351,13 +351,13 @@
             Controls.Add(label1);
             Controls.Add(pnlAlumno);
             Controls.Add(txtNombreCarrera);
-            Controls.Add(dgvCarreras);
+            Controls.Add(dgvAlumnos);
             Controls.Add(btnNuevo);
             Controls.Add(btnGuardar);
             Controls.Add(btnEliminar);
             Name = "frmAlumnos";
             Text = "frmAlumnos";
-            ((System.ComponentModel.ISupportInitialize)dgvCarreras).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlumnos).EndInit();
             pnlAlumno.ResumeLayout(false);
             pnlAlumno.PerformLayout();
             pnlUsuario.ResumeLayout(false);
@@ -372,7 +372,7 @@
         private Button btnNuevo;
         private Button btnGuardar;
         private Button btnEliminar;
-        private DataGridView dgvCarreras;
+        private DataGridView dgvAlumnos;
         private TextBox txtNombreCarrera;
         private TextBox txtmatricula;
         private TextBox txtPromedio;
