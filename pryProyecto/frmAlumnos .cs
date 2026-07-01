@@ -19,13 +19,12 @@ namespace pryProyecto
         public frmAlumnos()
         {
             InitializeComponent();
-            CargarCombos();
             cargarGrid();
-
+            CargarCombos();
         }
         public void cargarGrid()
         {
-            
+            alumnos = new clsAlumnos();
             dgvAlumnos.DataSource = null;
             dgvAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             try
@@ -89,7 +88,7 @@ namespace pryProyecto
 
         private void dgvAlumnos_SelectionChanged(object sender, EventArgs e)
         {
-            try
+              try
             {
 
                 //Esto es para poder saber si es nuevo o vamos a actualizar
@@ -119,6 +118,35 @@ namespace pryProyecto
             catch (Exception ex)
             {
                 MessageBox.Show("Error al mapear los datos seleccionados" + ex.Message);
+            }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            idMatricula = 0;
+            idUsuario = 0;
+            alumnos.LimpiarPanel(pnlAlumno);
+            alumnos.LimpiarPanel(pnlUsuario);
+            txtMatricula.Focus();
+        }
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtMatriculaAlumno.Text))
+            {
+                cargarGrid();
+                return;
+            }
+            alumnos = new clsAlumnos();
+            dgvAlumnos.DataSource = null;
+            dgvAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            try
+            {
+                alumnos.Matricula = int.Parse(txtMatriculaAlumno.Text);
+                dgvAlumnos.DataSource = alumnos.Consultar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Requiere poner datos" + ex.Message);
             }
         }
     }
