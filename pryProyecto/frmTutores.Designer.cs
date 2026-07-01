@@ -117,7 +117,7 @@
             // btnGurdar
             // 
             btnGurdar.BackColor = SystemColors.ControlLightLight;
-            btnGurdar.BackgroundImage = Properties.Resources.Guadar;
+            btnGurdar.BackgroundImage = (Image)resources.GetObject("btnGurdar.BackgroundImage");
             btnGurdar.BackgroundImageLayout = ImageLayout.Stretch;
             btnGurdar.Location = new Point(295, 261);
             btnGurdar.Name = "btnGurdar";
