@@ -12,9 +12,25 @@ namespace pryProyecto
 {
     public partial class frmAlumnos : Form
     {
+        clsAlumnos alumnos;
         public frmAlumnos()
         {
             InitializeComponent();
+
+        }
+        public void cargarGrid()
+        {
+            alumnos = new clsAlumnos();
+            dgvAlumnos.DataSource = null;
+            dgvAlumnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            try
+            {
+                dgvAlumnos.DataSource = alumnos.CargarDataGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
