@@ -64,7 +64,7 @@
             // 
             // btnNuevo
             // 
-            btnNuevo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnNuevo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnNuevo.BackColor = SystemColors.ButtonHighlight;
             btnNuevo.BackgroundImage = (Image)resources.GetObject("btnNuevo.BackgroundImage");
             btnNuevo.BackgroundImageLayout = ImageLayout.Stretch;
@@ -78,7 +78,7 @@
             // 
             // btnGuardar
             // 
-            btnGuardar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnGuardar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnGuardar.BackColor = SystemColors.ButtonHighlight;
             btnGuardar.BackgroundImage = (Image)resources.GetObject("btnGuardar.BackgroundImage");
             btnGuardar.BackgroundImageLayout = ImageLayout.Stretch;
@@ -90,7 +90,7 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnEliminar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnEliminar.BackColor = SystemColors.HighlightText;
             btnEliminar.BackgroundImage = (Image)resources.GetObject("btnEliminar.BackgroundImage");
             btnEliminar.BackgroundImageLayout = ImageLayout.Stretch;
@@ -108,7 +108,7 @@
             dataGridViewCellStyle1.ForeColor = Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = Color.Blue;
             dgvAlumnos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgvAlumnos.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dgvAlumnos.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             dgvAlumnos.BackgroundColor = SystemColors.ControlLight;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.Coral;
@@ -138,7 +138,7 @@
             // 
             // txtMatriculaAlumno
             // 
-            txtMatriculaAlumno.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtMatriculaAlumno.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtMatriculaAlumno.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtMatriculaAlumno.Location = new Point(602, 324);
             txtMatriculaAlumno.Name = "txtMatriculaAlumno";
@@ -149,7 +149,7 @@
             // 
             // txtMatricula
             // 
-            txtMatricula.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtMatricula.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtMatricula.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             txtMatricula.Location = new Point(25, 18);
             txtMatricula.Margin = new Padding(3, 2, 3, 2);
@@ -160,7 +160,7 @@
             // 
             // txtPromedio
             // 
-            txtPromedio.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtPromedio.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtPromedio.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             txtPromedio.Location = new Point(339, 83);
             txtPromedio.Margin = new Padding(3, 2, 3, 2);
@@ -171,7 +171,7 @@
             // 
             // txtDireccion
             // 
-            txtDireccion.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtDireccion.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtDireccion.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             txtDireccion.Location = new Point(25, 150);
             txtDireccion.Margin = new Padding(3, 2, 3, 2);
@@ -182,7 +182,7 @@
             // 
             // txtAMaterno
             // 
-            txtAMaterno.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtAMaterno.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtAMaterno.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             txtAMaterno.Location = new Point(25, 117);
             txtAMaterno.Margin = new Padding(3, 2, 3, 2);
@@ -193,7 +193,7 @@
             // 
             // txtAPaterno
             // 
-            txtAPaterno.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtAPaterno.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtAPaterno.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             txtAPaterno.Location = new Point(25, 84);
             txtAPaterno.Margin = new Padding(3, 2, 3, 2);
@@ -204,7 +204,7 @@
             // 
             // txtNombreAlumno
             // 
-            txtNombreAlumno.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtNombreAlumno.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtNombreAlumno.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             txtNombreAlumno.Location = new Point(25, 51);
             txtNombreAlumno.Margin = new Padding(3, 2, 3, 2);
@@ -215,7 +215,7 @@
             // 
             // txtTelefono
             // 
-            txtTelefono.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtTelefono.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtTelefono.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             txtTelefono.Location = new Point(339, 17);
             txtTelefono.Margin = new Padding(3, 2, 3, 2);
@@ -226,7 +226,7 @@
             // 
             // txtCorreo
             // 
-            txtCorreo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtCorreo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtCorreo.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             txtCorreo.Location = new Point(339, 50);
             txtCorreo.Margin = new Padding(3, 2, 3, 2);
@@ -237,7 +237,7 @@
             // 
             // cmbTutores
             // 
-            cmbTutores.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cmbTutores.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cmbTutores.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             cmbTutores.FormattingEnabled = true;
             cmbTutores.Location = new Point(339, 116);
@@ -248,7 +248,7 @@
             // 
             // cmbCarreras
             // 
-            cmbCarreras.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cmbCarreras.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cmbCarreras.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             cmbCarreras.FormattingEnabled = true;
             cmbCarreras.Location = new Point(339, 149);
@@ -281,7 +281,7 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.BackColor = SystemColors.ActiveCaption;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -293,7 +293,7 @@
             // 
             // txtNombreUsuario
             // 
-            txtNombreUsuario.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtNombreUsuario.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtNombreUsuario.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             txtNombreUsuario.Location = new Point(18, 16);
             txtNombreUsuario.Margin = new Padding(3, 2, 3, 2);
@@ -304,7 +304,7 @@
             // 
             // txtPassword
             // 
-            txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             txtPassword.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             txtPassword.Location = new Point(18, 50);
             txtPassword.Margin = new Padding(3, 2, 3, 2);
@@ -315,7 +315,7 @@
             // 
             // cmbPerfil
             // 
-            cmbPerfil.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            cmbPerfil.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cmbPerfil.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold);
             cmbPerfil.FormattingEnabled = true;
             cmbPerfil.Location = new Point(18, 117);
@@ -326,7 +326,7 @@
             // 
             // pnlUsuario
             // 
-            pnlUsuario.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            pnlUsuario.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pnlUsuario.BackColor = SystemColors.ActiveCaption;
             pnlUsuario.BorderStyle = BorderStyle.Fixed3D;
             pnlUsuario.Controls.Add(cmbPerfil);
@@ -340,7 +340,7 @@
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.BackColor = SystemColors.ActiveCaption;
             label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -352,7 +352,7 @@
             // 
             // pcbLogo
             // 
-            pcbLogo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            pcbLogo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pcbLogo.BackColor = SystemColors.ButtonFace;
             pcbLogo.BackgroundImageLayout = ImageLayout.Center;
             pcbLogo.Image = (Image)resources.GetObject("pcbLogo.Image");
@@ -365,7 +365,7 @@
             // 
             // lblTitulo
             // 
-            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblTitulo.AutoSize = true;
             lblTitulo.BackColor = SystemColors.ButtonFace;
             lblTitulo.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
