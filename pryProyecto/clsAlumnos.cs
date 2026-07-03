@@ -217,11 +217,11 @@ namespace pryProyecto
                                         comando.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
                                         comando.Parameters.AddWithValue("@password", password);
                                         comando.Parameters.AddWithValue("@perfil", perfil);
-                                        nuevoIdUsuario = Convert.ToInt32(comando.ExecuteScalar);
+                                        nuevoIdUsuario = Convert.ToInt32(comando.ExecuteScalar());
 
                                     }
                                     string sqlInsAlumno = "INSERT INTO tblalumnos(matricula,idUsuario,nombreAlumno,apellidoP,apellidoM,direccion,telefono,correo,promedioBachillerato,idTutor,idCarrera)" + 
-                                                        "VALUES(@matricula,idUsuario,@nombreAlumno,@apellidoP,@apellidoM,@direccion,@telefono,@correo,@promedioBachillerato,idTutor,@idCarrera";
+                                                        "VALUES(@matricula,@idUsuario,@nombreAlumno,@apellidoP,@apellidoM,@direccion,@telefono,@correo,@promedioBachillerato,@idTutor,@idCarrera);";
                                     using(comando=new MySqlCommand(sqlInsAlumno, conexion, transaccion))
                                     {
                                         comando.Parameters.AddWithValue("@matricula", matricula);
@@ -232,7 +232,7 @@ namespace pryProyecto
                                         comando.Parameters.AddWithValue("@direccion", direccion);
                                         comando.Parameters.AddWithValue("@telefono", telefono);
                                         comando.Parameters.AddWithValue("@correo", correo);
-                                        comando.Parameters.AddWithValue("@promedioBachierato", promedioBachillerato);
+                                        comando.Parameters.AddWithValue("@promedioBachillerato", promedioBachillerato);
                                         comando.Parameters.AddWithValue("@idTutor", idTutor);
                                         comando.Parameters.AddWithValue("@idCarrera", idCarrera);
 
@@ -241,8 +241,8 @@ namespace pryProyecto
                                     msg = "El alumno y sus credenciales se guardaron correctamente";
                                     break;
                                 case 1:
-                                    string sqlUpdUser = "UPDATE tblusuarios SET nombreUsuario=@nombreUsuario,password=MD5(@password),perfil=@perfil" +
-                                                      "WHERE intiUsuario=@idUsuario;";
+                                    string sqlUpdUser = "UPDATE tblusuarios SET nombreUsuario=@nombreUsuario,password=MD5(@password),perfil = @perfil" +
+                                                      " WHERE idUsuario=@idUsuario;";
                                     using (comando = new MySqlCommand(sqlUpdUser, conexion, transaccion))
                                     {
                                         comando.Parameters.AddWithValue("@idUsuario", idUsuario);
