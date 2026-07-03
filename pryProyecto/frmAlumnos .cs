@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -204,6 +205,32 @@ namespace pryProyecto
                 MessageBox.Show("No se pudieron guardar los datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            var respuesta = MessageBox.Show($"¿Estas completamente seguro de eliminar al alumno con matricula:{idMatricula}?\nEsta acción borrará tambien su cuenta de usuario.",
+                                "¡Advertencia!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+            if (respuesta == DialogResult.Yes)
+            {
+                try
+                {
+                    alumnos = new clsAlumnos();
+                    alumnos.Matricula = idMatricula;
+                    alumnos.IdUsuario = idUsuario;
+
+                    string resultado = alumnos.Eliminar();
+
+                    MessageBox.Show(resultado, "Registro eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    cargarGrid();
+
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al intentar eliminar el registro: " + ex.Message, "Error operacional", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
