@@ -208,67 +208,67 @@ namespace pryProyecto
                             {
                                 case 0:
                               
-                                    string sqlInsUser = "INSERT INTO tblusuarios(vchnombreUsuario, vchpassword, vchperfil, vchestado)"+
-                                                        "VALUES(@nomUser,MD5(@pass),@perfil,'Activo');SELECT LAST_INSERT_ID();";
+                                    string sqlInsUser = "INSERT INTO tblusuarios(nombreUsuario, password, perfil, estado)"+
+                                                        "VALUES(@nombreUsuario,MD5(@password),@perfil,'Activo');SELECT LAST_INSERT_ID();";
 
                                     int nuevoIdUsuario = 0;
                                     using (comando = new MySqlCommand(sqlInsUser, conexion, transaccion))
                                     {
-                                        comando.Parameters.AddWithValue("@nomUser", nombreUsuario);
-                                        comando.Parameters.AddWithValue("@pass", password);
+                                        comando.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
+                                        comando.Parameters.AddWithValue("@password", password);
                                         comando.Parameters.AddWithValue("@perfil", perfil);
                                         nuevoIdUsuario = Convert.ToInt32(comando.ExecuteScalar);
 
                                     }
-                                    string sqlInsAlumno = "INSERT INTO tblalumnos(matricula,idUsuario,nombreAlumno,apellidoP,apellidoM,direccion,telefono,correo,promedioBachillerato,idTutro,idCarrera)" + 
-                                                        "VALUES(@matricula,idUsuario,@nombre,@apP,@apM,@dir,@tel,@correo,@prom,qidTutor,@idCarrea";
+                                    string sqlInsAlumno = "INSERT INTO tblalumnos(matricula,idUsuario,nombreAlumno,apellidoP,apellidoM,direccion,telefono,correo,promedioBachillerato,idTutor,idCarrera)" + 
+                                                        "VALUES(@matricula,idUsuario,@nombreAlumno,@apellidoP,@apellidoM,@direccion,@telefono,@correo,@promedioBachillerato,idTutor,@idCarrera";
                                     using(comando=new MySqlCommand(sqlInsAlumno, conexion, transaccion))
                                     {
                                         comando.Parameters.AddWithValue("@matricula", matricula);
-                                        comando.Parameters.AddWithValue("@idUsuarioo", nuevoIdUsuario);
-                                        comando.Parameters.AddWithValue("@nombre", nombreAlumno);
-                                        comando.Parameters.AddWithValue("@apP", apellidoP);
-                                        comando.Parameters.AddWithValue("@apM", apellidoM);
-                                        comando.Parameters.AddWithValue("@dir", direccion);
-                                        comando.Parameters.AddWithValue("@tel", telefono);
+                                        comando.Parameters.AddWithValue("@idUsuario", nuevoIdUsuario);
+                                        comando.Parameters.AddWithValue("@nombreAlumno", nombreAlumno);
+                                        comando.Parameters.AddWithValue("@apellidoP", apellidoP);
+                                        comando.Parameters.AddWithValue("@apellidoM", apellidoM);
+                                        comando.Parameters.AddWithValue("@direccion", direccion);
+                                        comando.Parameters.AddWithValue("@telefono", telefono);
                                         comando.Parameters.AddWithValue("@correo", correo);
-                                        comando.Parameters.AddWithValue("@prom", promedioBachillerato);
+                                        comando.Parameters.AddWithValue("@promedioBachierato", promedioBachillerato);
                                         comando.Parameters.AddWithValue("@idTutor", idTutor);
-                                        comando.Parameters.AddWithValue("@idCarrea", idCarrera);
+                                        comando.Parameters.AddWithValue("@idCarrera", idCarrera);
 
                                         comando.ExecuteNonQuery();
                                     }
                                     msg = "El alumno y sus credenciales se guardaron correctamente";
                                     break;
                                 case 1:
-                                    string sqlUpdUser = "UPDATE tblusuarios SET vchnombreUsuario=@nomUser,vchpassword=MD5(@pass),vchperfil=@perfil" +
+                                    string sqlUpdUser = "UPDATE tblusuarios SET nombreUsuario=@nombreUsuario,password=MD5(@password),perfil=@perfil" +
                                                       "WHERE intiUsuario=@idUsuario;";
                                     using (comando = new MySqlCommand(sqlUpdUser, conexion, transaccion))
                                     {
                                         comando.Parameters.AddWithValue("@idUsuario", idUsuario);
-                                        comando.Parameters.AddWithValue("@nomUser", nombreUsuario);
-                                        comando.Parameters.AddWithValue("@pass", password);
+                                        comando.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
+                                        comando.Parameters.AddWithValue("@password", password);
                                         comando.Parameters.AddWithValue("@perfil", perfil);
 
                                         comando.ExecuteNonQuery();
                                     }
 
-                                    string sqlUpdAlumno = "UPDATE tblalumnos SET nombreAlumnos=@nombre.apellidoP=@apP,apellidoM=@apM," +
-                                        "direccion=@dir,telefono=@tel,correo=@correo,promedioBachillerato=@prom," +
+                                    string sqlUpdAlumno = "UPDATE tblalumnos SET nombreAlumno=@nombreAlumno,apellidoP=@apellidoP,apellidoM=@apellidoM," +
+                                        "direccion=@direccion,telefono=@telefono,correo=@correo,promedioBachillerato=@promedioBachillerato," +
                                         "idTutor=@idTutor,idCarrera=@idCarrera WHERE matricula=@matricula;";
 
                                     using (comando = new MySqlCommand(sqlUpdAlumno, conexion, transaccion))
                                     {
                                         comando.Parameters.AddWithValue("@matricula", matricula);
-                                        comando.Parameters.AddWithValue("@nombre", nombreAlumno);
-                                        comando.Parameters.AddWithValue("@apP", apellidoP);
-                                        comando.Parameters.AddWithValue("@apM", apellidoM);
-                                        comando.Parameters.AddWithValue("@dir", direccion);
-                                        comando.Parameters.AddWithValue("@tel", telefono);
+                                        comando.Parameters.AddWithValue("@nombreAlumno", nombreAlumno);
+                                        comando.Parameters.AddWithValue("@apellidoP", apellidoP);
+                                        comando.Parameters.AddWithValue("@apellidoM", apellidoM);
+                                        comando.Parameters.AddWithValue("@direccion", direccion);
+                                        comando.Parameters.AddWithValue("@telefono", telefono);
                                         comando.Parameters.AddWithValue("@correo", correo);
-                                        comando.Parameters.AddWithValue("@prom", promedioBachillerato);
+                                        comando.Parameters.AddWithValue("@promedioBachillerato", promedioBachillerato);
                                         comando.Parameters.AddWithValue("@idTutor", idTutor);
-                                        comando.Parameters.AddWithValue("@idCarrea", idCarrera);
+                                        comando.Parameters.AddWithValue("@idCarrera", idCarrera);
 
                                         comando.ExecuteNonQuery();
 
