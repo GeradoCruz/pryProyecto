@@ -20,8 +20,9 @@ namespace pryProyecto
         public frmAlumnos()
         {
             InitializeComponent();
-            cargarGrid();
             CargarCombos();
+            cargarGrid();
+            
         }
         public void cargarGrid()
         {
@@ -89,6 +90,7 @@ namespace pryProyecto
 
         private void dgvAlumnos_SelectionChanged(object sender, EventArgs e)
         {
+            if (dgvAlumnos.CurrentRow == null) return;
             try
             {
 

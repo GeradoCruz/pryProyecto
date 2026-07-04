@@ -142,7 +142,7 @@ namespace pryProyecto
 
                 else if (control is ComboBox)
                 {
-                    ((ComboBox)control).SelectedIndex = -1;
+                    ((ComboBox)control).SelectedIndex = 0;
                 }
             }
         }
@@ -241,13 +241,12 @@ namespace pryProyecto
                                     msg = "El alumno y sus credenciales se guardaron correctamente";
                                     break;
                                 case 1:
-                                    string sqlUpdUser = "UPDATE tblusuarios SET nombreUsuario=@nombreUsuario,password=MD5(@password),perfil = @perfil" +
+                                    string sqlUpdUser = "UPDATE tblusuarios SET nombreUsuario=@nombreUsuario,perfil = @perfil" +
                                                       " WHERE idUsuario=@idUsuario;";
                                     using (comando = new MySqlCommand(sqlUpdUser, conexion, transaccion))
                                     {
                                         comando.Parameters.AddWithValue("@idUsuario", idUsuario);
                                         comando.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
-                                        comando.Parameters.AddWithValue("@password", password);
                                         comando.Parameters.AddWithValue("@perfil", perfil);
 
                                         comando.ExecuteNonQuery();
