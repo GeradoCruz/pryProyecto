@@ -146,7 +146,7 @@ namespace pryProyecto
                 }
             }
         }
-        public DataTable Consultar() 
+        public DataTable Consultar()
         {
             tabla = new DataTable();
             try
@@ -207,22 +207,24 @@ namespace pryProyecto
                             switch (tipoOperacion)
                             {
                                 case 0:
-                              
-                                    string sqlInsUser = "INSERT INTO tblusuarios(nombreUsuario, password, perfil, estado) "+
+
+                                    string sqlInsUser = "INSERT INTO tblusuarios(nombreUsuario, password, perfil, estado) " +
                                                         "VALUES(@nombreUsuario,MD5(@password),@perfil,'Activo');SELECT LAST_INSERT_ID();";
 
                                     int nuevoIdUsuario = 0;
                                     using (comando = new MySqlCommand(sqlInsUser, conexion, transaccion))
                                     {
-                                        comando.Parameters.AddWithValue("@nombreUsuario", nombreUsuario);
-                                        comando.Parameters.AddWithValue("@password", password);
+                                        comando.Parameters.AddWithValue("@nombreUsuario",
+                                            string.IsNullOrWhiteSpace(nombreUsuario) ? (object)DBNull.Value : nombreUsuario);
+                                        comando.Parameters.AddWithValue("@password",
+                                            string.IsNullOrWhiteSpace(password) ? (object)DBNull.Value : password);
                                         comando.Parameters.AddWithValue("@perfil", perfil);
                                         nuevoIdUsuario = Convert.ToInt32(comando.ExecuteScalar());
-                                        
+
                                     }
-                                    string sqlInsAlumno = "INSERT INTO tblalumnos(matricula,idUsuario,nombreAlumno,apellidoP,apellidoM,direccion,telefono,correo,promedioBachillerato,idTutor,idCarrera) " + 
+                                    string sqlInsAlumno = "INSERT INTO tblalumnos(matricula,idUsuario,nombreAlumno,apellidoP,apellidoM,direccion,telefono,correo,promedioBachillerato,idTutor,idCarrera) " +
                                                         "VALUES(@matricula,@idUsuario,@nombreAlumno,@apellidoP,@apellidoM,@direccion,@telefono,@correo,@promedioBachillerato,@idTutor,@idCarrera);";
-                                    using(comando=new MySqlCommand(sqlInsAlumno, conexion, transaccion))
+                                    using (comando = new MySqlCommand(sqlInsAlumno, conexion, transaccion))
                                     {
                                         comando.Parameters.AddWithValue("@matricula", matricula);
                                         comando.Parameters.AddWithValue("@idUsuario", nuevoIdUsuario);
@@ -278,7 +280,7 @@ namespace pryProyecto
                             }
                             transaccion.Commit();
                         }
-                        catch(Exception ex)
+                        catch (Exception ex)
                         {
                             transaccion.Rollback();
                             throw new Exception("Error en la operacion. Se cancelaron los cambios:" + ex.Message);
@@ -287,7 +289,7 @@ namespace pryProyecto
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception("Error de conexion:" + ex.Message);
             }
