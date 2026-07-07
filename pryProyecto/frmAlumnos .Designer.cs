@@ -141,7 +141,7 @@
             txtMatriculaAlumno.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtMatriculaAlumno.Location = new Point(602, 324);
             txtMatriculaAlumno.Name = "txtMatriculaAlumno";
-            txtMatriculaAlumno.PlaceholderText = "Buscar Alumno";
+            txtMatriculaAlumno.PlaceholderText = "Buscar por clave";
             txtMatriculaAlumno.Size = new Size(351, 33);
             txtMatriculaAlumno.TabIndex = 9;
             txtMatriculaAlumno.TextChanged += txtNombre_TextChanged;

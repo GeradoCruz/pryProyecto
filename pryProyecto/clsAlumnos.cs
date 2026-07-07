@@ -208,7 +208,7 @@ namespace pryProyecto
                             {
                                 case 0:
                               
-                                    string sqlInsUser = "INSERT INTO tblusuarios(nombreUsuario, password, perfil, estado)"+
+                                    string sqlInsUser = "INSERT INTO tblusuarios(nombreUsuario, password, perfil, estado) "+
                                                         "VALUES(@nombreUsuario,MD5(@password),@perfil,'Activo');SELECT LAST_INSERT_ID();";
 
                                     int nuevoIdUsuario = 0;
@@ -218,9 +218,9 @@ namespace pryProyecto
                                         comando.Parameters.AddWithValue("@password", password);
                                         comando.Parameters.AddWithValue("@perfil", perfil);
                                         nuevoIdUsuario = Convert.ToInt32(comando.ExecuteScalar());
-
+                                        
                                     }
-                                    string sqlInsAlumno = "INSERT INTO tblalumnos(matricula,idUsuario,nombreAlumno,apellidoP,apellidoM,direccion,telefono,correo,promedioBachillerato,idTutor,idCarrera)" + 
+                                    string sqlInsAlumno = "INSERT INTO tblalumnos(matricula,idUsuario,nombreAlumno,apellidoP,apellidoM,direccion,telefono,correo,promedioBachillerato,idTutor,idCarrera) " + 
                                                         "VALUES(@matricula,@idUsuario,@nombreAlumno,@apellidoP,@apellidoM,@direccion,@telefono,@correo,@promedioBachillerato,@idTutor,@idCarrera);";
                                     using(comando=new MySqlCommand(sqlInsAlumno, conexion, transaccion))
                                     {
