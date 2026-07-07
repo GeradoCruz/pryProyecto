@@ -164,20 +164,20 @@ namespace pryProyecto
 
                 //1.llenamos  las propiedades del bloque alumno
                 alumnos.Matricula = int.Parse(txtMatricula.Text);
-                alumnos.NombreAlumno = txtNombreAlumno.Text;
-                alumnos.ApellidoP = txtAPaterno.Text;
+                alumnos.NombreAlumno = string.IsNullOrEmpty(txtNombreAlumno.Text) ?null: txtNombreAlumno.Text;
+                alumnos.ApellidoP = string.IsNullOrEmpty(txtAPaterno.Text) ? null : txtAPaterno.Text;
                 alumnos.ApellidoM = txtAMaterno.Text;
-                alumnos.Direccion = txtDireccion.Text;
-                alumnos.Telefono = txtTelefono.Text;
-                alumnos.Correo = txtCorreo.Text;
+                alumnos.Direccion = string.IsNullOrEmpty(txtDireccion.Text) ? null : txtDireccion.Text;
+                alumnos.Telefono = string.IsNullOrEmpty(txtTelefono.Text) ? null : txtTelefono.Text;
+                alumnos.Correo = string.IsNullOrEmpty(txtCorreo.Text) ? null : txtCorreo.Text;
                 alumnos.PromedioBachillerato = decimal.Parse(txtPromedio.Text);
                 alumnos.IdCarrera = Convert.ToInt32(cmbCarreras.SelectedValue);
                 alumnos.IdTutor = Convert.ToInt32(cmbTutores.SelectedValue);
 
                 //2. Llenamos las propiedades del bloque Usuario
                 alumnos.IdUsuario = idUsuario; //Sera 0 si es nuevo, o el ID real si es update
-                alumnos.NombreUsuario = txtNombreUsuario.Text;
-                alumnos.Password = txtPassword.Text;
+                alumnos.NombreUsuario = string.IsNullOrEmpty(txtNombreUsuario.Text) ? null : txtNombreUsuario.Text;
+                alumnos.Password = string.IsNullOrEmpty(txtPassword.Text) ? null : txtPassword.Text;
                 alumnos.Perfil = cmbPerfil.Text;
 
                 string msg = "";
