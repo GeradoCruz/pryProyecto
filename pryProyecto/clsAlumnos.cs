@@ -214,6 +214,7 @@ namespace pryProyecto
                                     int nuevoIdUsuario = 0;
                                     using (comando = new MySqlCommand(sqlInsUser, conexion, transaccion))
                                     {
+                                        
                                         comando.Parameters.AddWithValue("@nombreUsuario",
                                             string.IsNullOrWhiteSpace(nombreUsuario) ? (object)DBNull.Value : nombreUsuario);
                                         comando.Parameters.AddWithValue("@password",
