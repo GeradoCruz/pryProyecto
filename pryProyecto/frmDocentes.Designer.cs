@@ -224,6 +224,7 @@
             dgvDocentes.RowTemplate.Height = 35;
             dgvDocentes.Size = new Size(930, 171);
             dgvDocentes.TabIndex = 6;
+            dgvDocentes.SelectionChanged += dgvDocentes_SelectionChanged;
             // 
             // btnNuevo
             // 
