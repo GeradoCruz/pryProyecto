@@ -222,5 +222,41 @@ namespace pryProyecto
 
             return msg;
         }
+
+        public DataTable Consultar()
+        {
+            tabla = new DataTable();
+            try
+            {
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+                    string sql = "SELECT D.claveDocente AS Clave, " +
+                                 "D.nombreDocente AS Docente, " +
+                                 "D.puesto AS Puesto, " +
+                                 "D.telefono AS Telefono, " +
+                                 "D.correo AS Correo, " +
+                                 "D.idUsuario, " +
+                                 "U.nombreUsuario AS Usuario, " +
+                                 "U.password AS Password, " +
+                                 "U.perfil AS Perfil " +
+                                 "FROM tbldocentes D " +
+                                 "INNER JOIN tblusuarios U ON D.idUsuario = U.idUsuario WHERE D.claveDocente LIKE @clave; ";
+                    using (var consultar = new MySqlCommand(sql, conexion))
+                    {
+                        consultar.Parameters.AddWithValue("@clave", clave);
+                        using (consulta = new MySqlDataAdapter(consultar))
+                        {
+                            consulta.Fill(tabla);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error en la conexion" + ex.Message);
+            }
+            return tabla;
+        }
     }
 }

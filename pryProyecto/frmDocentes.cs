@@ -149,5 +149,27 @@ namespace pryProyecto
                 }
             }
         }
+
+        private void txtClaveDocente_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtClaveDocente.Text))
+            {
+                cargarGrid();
+                return;
+            }
+            docentes = new clsDocentes();
+            dgvDocentes.DataSource = null;
+            dgvDocentes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            try
+            {
+                docentes.Clave = int.Parse(txtClaveDocente.Text);
+                dgvDocentes.DataSource = docentes.Consultar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Requiere poner datos" + ex.Message);
+            }
+        }
+
     }
 }
