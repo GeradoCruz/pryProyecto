@@ -44,6 +44,8 @@ namespace pryProyecto
             {
                 throw new Exception("Error al intentar cerrar la conexión a la base de datos :" + ex.Message, ex);
             }
+
+
         }
     }
 }
