@@ -195,7 +195,7 @@ namespace pryProyecto
                             }
 
 
-                            string sqlDelUsuario = "DELETE FROM tbldocentes WHERE idUsuario = @idUsuario;";
+                            string sqlDelUsuario = "DELETE FROM tblusuarios WHERE idUsuario = @idUsuario;";
                             using (comando = new MySqlCommand(sqlDelUsuario, conexion, transaccion))
                             {
                                 comando.Parameters.AddWithValue("@idUsuario", idUsuario);
