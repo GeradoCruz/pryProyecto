@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDocentes));
             txtPuesto = new TextBox();
             txtNombreDocente = new TextBox();
@@ -195,12 +197,31 @@
             // 
             // dgvDocentes
             // 
+            dgvDocentes.AllowUserToAddRows = false;
             dgvDocentes.BackgroundColor = SystemColors.ControlLight;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Info;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowFrame;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.ControlDark;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvDocentes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvDocentes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.WindowFrame;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvDocentes.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvDocentes.EnableHeadersVisualStyles = false;
             dgvDocentes.Location = new Point(23, 366);
             dgvDocentes.Margin = new Padding(3, 2, 3, 2);
             dgvDocentes.Name = "dgvDocentes";
             dgvDocentes.RowHeadersWidth = 51;
+            dgvDocentes.RowTemplate.Height = 35;
             dgvDocentes.Size = new Size(930, 171);
             dgvDocentes.TabIndex = 6;
             // 
