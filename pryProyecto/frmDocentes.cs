@@ -41,5 +41,31 @@ namespace pryProyecto
 
 
         }
+        private void dgvDocentes_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                //conocer si es nuevo o se actualizará
+                idClave = int.Parse(dgvDocentes.CurrentRow.Cells["Clave"].Value.ToString());
+                idUsuario = int.Parse(dgvDocentes.CurrentRow.Cells["idUsuario"].Value.ToString());
+
+                //Tabla Docente 
+                txtClave.Text = idClave.ToString();
+                txtNombreDocente.Text = dgvDocentes.CurrentRow.Cells["Docente"].Value.ToString();
+                txtPuesto.Text = dgvDocentes.CurrentRow.Cells["Puesto"].Value.ToString();
+                txtTelefono.Text = dgvDocentes.CurrentRow.Cells["Telefono"].Value.ToString();
+                txtCorreo.Text = dgvDocentes.CurrentRow.Cells["Correo"].Value.ToString();
+
+                //Tabla de usuarios 
+                txtUsuario.Text = dgvDocentes.CurrentRow.Cells["Usuario"].Value.ToString();
+                txtPassword.Text = dgvDocentes.CurrentRow.Cells["Password"].Value.ToString();
+                cmbPerfil.Text = dgvDocentes.CurrentRow.Cells["Perfil"].Value.ToString();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al mapear los datos seleccionados" + ex.Message);
+            }
+        }
     }
 }
