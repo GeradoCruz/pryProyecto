@@ -122,5 +122,32 @@ namespace pryProyecto
                 MessageBox.Show("No se pudieron guardar los datos:" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            {
+                var respuesta = MessageBox.Show($"¿Estás seguro de que deseas eliminar este Docente?", "ADVERTENCIA!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+                if (respuesta == DialogResult.Yes)
+                {
+                    try
+                    {
+
+                        docentes = new clsDocentes();
+
+                        docentes.Clave = idClave;
+                        docentes.IdUsuario = idUsuario;
+
+                        string resultado = docentes.Eliminar();
+
+                        MessageBox.Show(resultado, "Registro eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        cargarGrid();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al eliminar el registro: " + ex.Message, "Error operacional", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
     }
 }
