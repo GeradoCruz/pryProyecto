@@ -237,6 +237,7 @@
             btnNuevo.Size = new Size(132, 54);
             btnNuevo.TabIndex = 10;
             btnNuevo.UseVisualStyleBackColor = false;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // btnGuardar
             // 
@@ -248,6 +249,7 @@
             btnGuardar.Size = new Size(132, 54);
             btnGuardar.TabIndex = 9;
             btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnEliminar
             // 
@@ -263,7 +265,6 @@
             // pcbLogo
             // 
             pcbLogo.BorderStyle = BorderStyle.Fixed3D;
-            pcbLogo.Image = Properties.Resources.student;
             pcbLogo.Location = new Point(571, 7);
             pcbLogo.Margin = new Padding(3, 2, 3, 2);
             pcbLogo.Name = "pcbLogo";

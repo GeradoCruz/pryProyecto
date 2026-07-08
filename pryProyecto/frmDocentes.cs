@@ -67,5 +67,60 @@ namespace pryProyecto
                 MessageBox.Show("Error al mapear los datos seleccionados" + ex.Message);
             }
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            idClave = 0;
+            idUsuario = 0;
+            docentes.LimpiarPanel(pnlDocentes);
+            docentes.LimpiarPanel(pnlUsuario);
+            txtClave.Focus();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int tipoOperacion = idClave == 0 ? 0 : 1;
+
+                docentes = new clsDocentes();
+
+                docentes.Clave = int.Parse(txtClave.Text);
+                docentes.NombreDocente = string.IsNullOrEmpty(txtNombreDocente.Text) ? null : txtNombreDocente.Text;
+                docentes.Puesto = string.IsNullOrEmpty(txtPuesto.Text) ? null : txtPuesto.Text;
+                docentes.Telefono = string.IsNullOrEmpty(txtTelefono.Text) ? null : txtTelefono.Text;
+                docentes.Correo = string.IsNullOrEmpty(txtCorreo.Text) ? null : txtCorreo.Text;
+
+                //Propiedades del bloque de usuario
+                docentes.IdUsuario = idUsuario;
+                docentes.NombreUsuario = string.IsNullOrEmpty(txtUsuario.Text) ? null : txtUsuario.Text;
+                docentes.Password = string.IsNullOrEmpty(txtPassword.Text) ? null : txtPassword.Text;
+                docentes.Perfil = cmbPerfil.Text;
+
+                string msg = "";
+
+                //confirmacion de carrera
+                if (tipoOperacion == 1)
+                {
+                    var resp = MessageBox.Show("¿Confirmar que desea actualizar los datos de este docente?", "ALERTA", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (resp == DialogResult.Yes)
+                    {
+                        msg = docentes.GuardarActualizar(tipoOperacion);
+                        MessageBox.Show(msg, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    msg = docentes.GuardarActualizar(tipoOperacion);
+                    MessageBox.Show(msg, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                cargarGrid();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudieron guardar los datos:" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
